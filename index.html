@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Logística Transportadora S.A.</title>
+  <title>LT Hormigones — Logística Transportadora S.A.</title>
   <meta name="description" content="LT Hormigones — Soluciones en logística y transporte de hormigón y materiales. Tecnología, flota y experiencia al servicio de tu obra.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,14 @@
         <img src="assets/logo.PNG" alt="LT Hormigones" class="logo">
       </a>
       <nav class="main-nav" id="main-nav">
-        <a href="#nosotros">Nosotros</a>
-        <a href="#productos">Productos & Servicios</a>
-        <a href="#tecnologia">Tecnología</a>
-        <a href="#maquinaria">Maquinaria</a>
-        <a href="#obras">Obras</a>
-        <a href="#multimedia">Multimedia</a>
-        <a href="#redes">Redes</a>
-        <a href="#contacto">Contacto</a>
+        <a class="nav-link" href="#nosotros">Nosotros</a>
+        <a class="nav-link" href="#productos">Productos & Servicios</a>
+        <a class="nav-link" href="#tecnologia">Tecnología</a>
+        <a class="nav-link" href="#maquinaria">Maquinaria</a>
+        <a class="nav-link" href="#obras">Obras</a>
+        <a class="nav-link" href="#multimedia">Multimedia</a>
+        <a class="nav-link" href="#redes">Redes</a>
+        <a class="nav-link" href="#contacto">Contacto</a>
       </nav>
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
     </div>
@@ -35,7 +35,6 @@
     <section class="hero" id="home">
       <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero.jpg">
         <source src="assets/videos/hero.mp4" type="video/mp4">
-        <!-- Si no existe el video local, el poster se mostrará -->
       </video>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -48,12 +47,9 @@
       </div>
     </section>
 
-    <!-- WhatsApp flotante -->
+    <!-- WhatsApp flotante (logo oficial) -->
     <a id="whatsapp-fab" href="https://wa.me/549XXXXXXXXX?text=Hola%20LT%20Hormigones,%20quiero%20informaci%C3%B3n" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24" fill="none" width="28" height="28" aria-hidden="true">
-        <path d="M21.7 6.3A11 11 0 1 0 12 23v-3.2A8.1 8.1 0 0 1 19.3 9.1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M17 14.5c-.3-.1-1.7-.8-2-.9-.3-.1-.6-.1-.9.1s-1 1.1-1.2 1.3c-.3.3-.6.2-1-.1-.7-.6-1.9-1.9-2.6-3-.2-.4.2-.6.5-1l.4-.6c.2-.4.3-.6.4-.9.1-.2 0-.5-.1-.6-.1-.2-1-2.4-1.4-3.4-.3-.9-.7-.9-1-.9h-.8c-.3 0-.7 0-1 .1-.4.1-.9.4-1.1.9-.2.5-1 3-1.1 3.3-.1.4 0 .8.3 1 1 1 2.5 2.7 4.1 3.7 1.5 1 3.1 1 3.6 1 .6 0 1.6-.5 2.2-.9.5-.4 1-1 1.2-1.3.2-.3.2-.6.1-.7" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <img src="assets/social/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
     </a>
 
     <!-- Nosotros -->
@@ -109,7 +105,6 @@
         <h2>Tecnología y Equipamiento</h2>
         <p class="lead">Digitalización, telemetría y mantenimientos preventivos para garantizar disponibilidad de flota y calidad del producto.</p>
         <div class="equip-grid" id="equip-grid">
-          <!-- Las imágenes se leen desde assets/equip/1.jpg ... -->
           <div class="equip">
             <img src="assets/equip/1.jpg" alt="Camión hormigonera">
             <h5>Camiones Hormigonera</h5>
@@ -157,7 +152,6 @@
         <h2>Obras Realizadas</h2>
         <p class="lead">Proyectos destacados donde fuimos parte del éxito.</p>
         <div class="gallery" id="works-gallery">
-          <!-- Cargado automáticamente desde assets/works/work1.jpg .. work8.jpg si están presentes -->
         </div>
       </div>
     </section>
@@ -168,7 +162,6 @@
         <h2>Multimedia</h2>
         <p class="lead">Videos e inspecciones multimedia de nuestras operaciones.</p>
         <div class="media-grid" id="media-grid">
-          <!-- Cargado automáticamente desde assets/media/media1.jpg/media1.mp4 -->
         </div>
       </div>
     </section>
@@ -195,12 +188,11 @@
           </a>
         </div>
 
-        <!-- Placeholders para integración futura: Instagram / Facebook widgets -->
         <div class="social-widgets">
-          <div class="widget" id="instagram-widget"> <!-- Rellenar con Instagram Basic Display o un plugin -->
+          <div class="widget" id="instagram-widget">
             <p class="muted">Widget de Instagram (reemplazar con integración)</p>
           </div>
-          <div class="widget" id="facebook-widget"> <!-- Rellenar con Facebook Page plugin -->
+          <div class="widget" id="facebook-widget">
             <p class="muted">Widget de Facebook (reemplazar con integración)</p>
           </div>
         </div>
@@ -212,8 +204,11 @@
       <div class="container contact-grid">
         <div class="contact-card">
          <div class="brand-contact">
-      <img src="assets/logogones" class="logo-footer">
-      <h2>Contacto</h2>
+      <img src="assets/logo-footer.png" alt="LT Hormigones" class="logo-footer">
+      <div style="display:flex;flex-direction:column;">
+        <h2>Contacto</h2>
+        <small class="muted">Completa el formulario y haz clic en Enviar</small>
+      </div>
       </div>
           <p>Consultas comerciales, presupuestos y coordinación de obras.</p>
           <ul class="contact-info">
@@ -225,16 +220,20 @@
 
           <form id="contact-form" action="https://formspree.io/f/{tu_form_id}" method="POST">
             <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+            <small class="input-hint">Haz clic aquí y escribe tu nombre</small>
 
             <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" placeholder="Ej: +54 9 351 1234567">
+            <small class="input-hint">Incluye el prefijo internacional si corresponde</small>
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+            <small class="input-hint">Escribe una dirección válida para que podamos responder</small>
 
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+            <small class="input-hint">Describe brevemente tu consulta</small>
 
             <button class="btn btn-primary" type="submit">Enviar</button>
           </form>
@@ -242,8 +241,7 @@
 
         <div class="map-card">
           <h3>Ubicación</h3>
-          <div class="map-wrap">
-            <!-- Coordenadas claras y visibles -->
+          <div class="map-wrap map-small">
             <iframe id="gmap-frame" src="https://www.google.com/maps?q=-34.603722,-58.381592&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
