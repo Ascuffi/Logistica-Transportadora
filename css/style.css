@@ -50,7 +50,28 @@ body{
     display:flex;
     align-items:center;
 }
-.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(16,16,16,0.95), rgba(16,16,16,0.92));backdrop-filter:blur(6px);z-index:60;border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-header{
+    position:sticky;
+    top:0;
+    z-index:60;
+
+    background:rgba(16,16,16,0.75);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
+
+    transition:all .3s ease;
+}
+.site-header{
+    box-shadow:0 4px 20px rgba(0,0,0,.25);
+}
+.site-header:hover{
+    background:rgba(16,16,16,0.92);
+}
+.main-nav a:hover{
+    color:var(--yellow);
+    background:rgba(245,196,0,0.08);
+}
 .main-nav{display:flex;gap:18px}
 .main-nav a{color:var(--white);text-decoration:none;font-weight:600;font-size:.95rem;opacity:.95;padding:10px;border-radius:6px}
 .main-nav a:hover{background:rgba(245,196,0,0.06)}
