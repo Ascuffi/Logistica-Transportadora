@@ -174,9 +174,30 @@ h2{font-size:1.9rem;margin:0 0 10px}
 .lead{color:var(--muted);max-width:900px}
 
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.card{
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+    );
+    padding:20px;
+    border-radius:10px;
+    border:2px solid transparent;
+    backdrop-filter:blur(4px);
+    transition:all .3s ease;
+}
+.card:hover{
+    transform:translateY(-8px);
+    border-color:var(--yellow);
+    box-shadow:
+        0 0 20px rgba(245,196,0,.35),
+        0 0 40px rgba(245,196,0,.15);
+    background:rgba(20,20,20,.55);
+}
+.card:hover h3{
+    color:var(--yellow);
+}
 .card h3{margin:0 0 8px}
-
 .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
 .service{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
 .service h4{margin:0 0 8px}
