@@ -333,8 +333,8 @@ html{scroll-behavior:smooth}
 #nosotros{
     background:url("../assets/social/nosotros.jpeg");
         linear-gradient(
-            rgba(16,16,16,.88),
-            rgba(16,16,16,.88)
+            rgba(16,16,16,.60),
+            rgba(16,16,16,.60)
         ),
         url("../assets/social/nosotros.jpeg");
 
