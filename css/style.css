@@ -352,14 +352,15 @@ section{
 }
 html{scroll-behavior:smooth}
 #nosotros{
-    background:url("../assets/social/nosotros.jpeg");
+    background:
         linear-gradient(
-            rgba(16,16,16,.60),
-            rgba(16,16,16,.60)
+            rgba(16,16,16,.55),
+            rgba(16,16,16,.55)
         ),
-        url("../assets/social/nosotros.jpeg");
+        url("../assets/social/img31.PNG");
 
-    background-size:center;
-    background-position:center top;
-    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 700px;
 }
