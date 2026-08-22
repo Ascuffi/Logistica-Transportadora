@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', function(){
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Toggle menú móvil
-  const nav = document.getElementById('main-nav');
-  const toggle = document.getElementById('nav-toggle');
-  toggle.addEventListener('click', () => {
     if(getComputedStyle(nav).display === 'flex'){
       nav.style.display = 'none';
     } else {
