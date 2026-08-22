@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   // Social links (rellenar href en HTML o usando estas variables)
-  const facebookUrl = 'https://www.facebook.com/tu-pagina';
-  const instagramUrl = 'https://www.instagram.com/tu-cuenta';
+  const facebookUrl = "https://www.facebook.com/share/167cMEvde2r/?mibextid=wwXIfr";
+  const instagramUrl = 'https://www.instagram.com/lthormigones?igsi=MXc1dDQ0OW1tM2RuYg==';
   const fbLink = document.getElementById('facebook-link');
   const igLink = document.getElementById('instagram-link');
   if(fbLink) fbLink.href = facebookUrl;
