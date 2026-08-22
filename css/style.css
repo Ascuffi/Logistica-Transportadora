@@ -180,7 +180,7 @@ h2{font-size:1.9rem;margin:0 0 10px}
 .social-card{
     position:relative;
     overflow:hidden;
-    min-height:250px;
+    min-height:280px;
     display:flex;
     align-items:flex-end;
     padding:25px;
@@ -191,36 +191,44 @@ h2{font-size:1.9rem;margin:0 0 10px}
 }
 .social-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 12px 30px rgba(0,0,0,.4);
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
 }
 .facebook-card{
     background:
         linear-gradient(
-            rgba(0,0,0,.55),
+            rgba(0,0,0,.45),
             rgba(0,0,0,.80)
         ),
-        url("../assets/social/facebook-bg.jpg");
+        url("../assets/social/img48.jpg");
     background-size:cover;
     background-position:center;
 }
 .instagram-card{
     background:
         linear-gradient(
-            rgba(0,0,0,.55),
+            rgba(0,0,0,.45),
             rgba(0,0,0,.80)
         ),
-        url("../assets/social/instagram-bg.jpg");
+        url("../assets/social/img47.jpg");
     background-size:cover;
     background-position:center;
 }
 .social-card img{
-    width:70px;
-    height:70px;
+    width:75px;
+    height:75px;
     object-fit:contain;
+    margin-right:15px;
+}
+.social-card div{
+    background:rgba(0,0,0,.55);
+    padding:12px;
+    border-radius:10px;
+    width:100%;
 }
 .social-card h4{
     margin:0 0 8px;
     color:white;
+    font-size:1.3rem;
 }
 .social-card p{
     margin:0;
