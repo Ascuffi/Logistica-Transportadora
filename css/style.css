@@ -330,3 +330,15 @@ section{
     scroll-margin-top:120px;
 }
 html{scroll-behavior:smooth}
+#nosotros{
+    background:
+        linear-gradient(
+            rgba(16,16,16,.88),
+            rgba(16,16,16,.88)
+        ),
+        url("../assets/nosotros.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
