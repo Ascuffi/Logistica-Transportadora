@@ -196,10 +196,13 @@ h2{font-size:1.9rem;margin:0 0 10px}
 .social-card:hover{
     transform:translateY(-8px);
     border-color:var(--yellow);
+
+    background-blend-mode:multiply;
+
     box-shadow:
-        0 0 0 3px rgba(245,196,0,.6),
-        0 0 25px rgba(245,196,0,.4),
-        0 15px 35px rgba(0,0,0,.4);
+        0 0 0 2px var(--yellow),
+        0 0 30px rgba(245,196,0,.5);
+
 }
 .social-card:hover h4{
     color:var(--yellow);
@@ -234,15 +237,15 @@ h2{font-size:1.9rem;margin:0 0 10px}
     margin-right:15px;
 }
 .social-card div{
-    background:rgba(0,0,0,.55);
-    padding:12px;
-    border-radius:10px;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(4px);
+    padding:15px;
+    border-radius:12px;
     width:100%;
 }
 .social-card h4{
-    margin:0 0 8px;
-    color:white;
-    font-size:1.3rem;
+    font-size:1.6rem;
+    font-weight:800;
 }
 .social-card p{
     margin:0;
