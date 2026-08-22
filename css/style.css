@@ -190,14 +190,19 @@ h2{font-size:1.9rem;margin:0 0 10px}
     transition:.3s ease;
 }
 .social-card{
-    border:2px solid transparent;
+    border:3px solid transparent;
+    transition:all .3s ease;
 }
 .social-card:hover{
     transform:translateY(-8px);
     border-color:var(--yellow);
     box-shadow:
-        0 0 20px rgba(245,196,0,.45),
+        0 0 0 3px rgba(245,196,0,.6),
+        0 0 25px rgba(245,196,0,.4),
         0 15px 35px rgba(0,0,0,.4);
+}
+.social-card:hover h4{
+    color:var(--yellow);
 }
 .social-card:hover h4{
     color:var(--yellow);
