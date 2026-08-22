@@ -189,12 +189,21 @@ h2{font-size:1.9rem;margin:0 0 10px}
     color:white;
     transition:.3s ease;
 }
+.social-card{
+    border:2px solid transparent;
+}
 .social-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    border-color:var(--yellow);
+    box-shadow:
+        0 0 20px rgba(245,196,0,.45),
+        0 15px 35px rgba(0,0,0,.4);
+}
+.social-card:hover h4{
+    color:var(--yellow);
 }
 .facebook-card{
-    background:
+    background:blue;
         linear-gradient(
             rgba(0,0,0,.45),
             rgba(0,0,0,.80)
@@ -204,7 +213,7 @@ h2{font-size:1.9rem;margin:0 0 10px}
     background-position:center;
 }
 .instagram-card{
-    background:
+    background:red;
         linear-gradient(
             rgba(0,0,0,.45),
             rgba(0,0,0,.80)
