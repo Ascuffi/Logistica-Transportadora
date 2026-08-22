@@ -336,7 +336,7 @@ html{scroll-behavior:smooth}
             rgba(16,16,16,.88),
             rgba(16,16,16,.88)
         ),
-        url("../assets/nosotros.jpeg");
+        url("../assets/social/nosotros.jpeg");
 
     background-size:cover;
     background-position:center;
