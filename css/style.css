@@ -339,6 +339,6 @@ html{scroll-behavior:smooth}
         url("../assets/social/nosotros.jpeg");
 
     background-size:center;
-    background-position:center;
+    background-position:center top;
     background-repeat:no-repeat;
 }
