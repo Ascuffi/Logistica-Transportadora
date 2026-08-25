@@ -524,7 +524,7 @@ html{scroll-behavior:smooth}
 }
 /* Tarjetas premium */
 #nosotros .card{
-    background: rgba(0,0,0,.45);
+    /*background: rgba(0,0,0,.45);*/
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,.15);
     box-shadow: 0 10px 30px rgba(0,0,0,.35);
@@ -1010,10 +1010,11 @@ h2{
     z-i*dex:2;
 }
 .mision{
-    background-*mage:url("../assets/social/mision.webp");*}
-.vision{
-    background-image:u*l("../assets/social/vision.jpg");
+    background-image:url("../assets/social/mision.webp") !important;
 }
-.val*res{
-    background-image:url("../*ssets/social/valores1.jpg");
+.vision{
+    background-image:url("../assets/social/vision.jpg") !important;
+}
+.valores{
+    background-image:url("../assets/social/valores1.jpg") !important;
 }
