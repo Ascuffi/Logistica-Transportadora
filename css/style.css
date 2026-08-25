@@ -617,3 +617,127 @@ html{scroll-behavior:smooth}
 #maquinaria .lead{
     color:rgba(255,255,255,.95);
 }
+.equip{
+    min-height:280px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:25px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background-size:cover;
+    background-position:center;
+
+    border:2px solid transparent;
+
+    transition:all .35s ease;
+}
+
+.equip::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.85)
+    );
+
+    z-index:1;
+}
+
+.equip h5,
+.equip p{
+    position:relative;
+    z-index:2;
+    color:white;
+}
+
+.equip:hover{
+    transform:translateY(-8px);
+
+    border-color:var(--yellow);
+
+    box-shadow:
+        0 0 20px rgba(245,196,0,.35),
+        0 0 40px rgba(245,196,0,.15);
+}
+.mixer{
+    background-image:url("../assets/tec-mixer.jpg");
+}
+
+.bomba{
+    background-image:url("../assets/tec-bomba.jpg");
+}
+
+.laboratorio{
+    background-image:url("../assets/tec-laboratorio.jpg");
+}
+.machine{
+    min-height:280px;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:25px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background-size:cover;
+    background-position:center;
+
+    border:2px solid transparent;
+
+    transition:all .35s ease;
+}
+
+.machine::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.85)
+    );
+
+    z-index:1;
+}
+
+.machine h5{
+    position:relative;
+    z-index:2;
+    color:white;
+}
+
+.machine:hover{
+    transform:translateY(-8px);
+
+    border-color:var(--yellow);
+
+    box-shadow:
+        0 0 20px rgba(245,196,0,.35),
+        0 0 40px rgba(245,196,0,.15);
+}
+.mezcladora{
+    background-image:url("../assets/maq-mezcladora.jpg");
+}
+
+.planta{
+    background-image:url("../assets/maq-planta.jpg");
+}
+
+.camionbomba{
+    background-image:url("../assets/maq-camionbomba.jpg");
+}
