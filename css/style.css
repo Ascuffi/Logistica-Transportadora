@@ -609,13 +609,13 @@ html{scroll-behavior:smooth}
     background-image:url("../assets/Laboratorio1.webp")!important;
 }
 .transporte{
-    background-image:url("../assets/img37.PNG");
+    background-image:url("../assets/img37.PNG")!important;
 }
 .bombas{
-    background-image:url("../assets/img48.jpeg");
+    background-image:url("../assets/img48.jpeg")!important;
 }
 .logistica{
-    background-image:url("../assets/img.png1.PNG");
+    background-image:url("../assets/img.png1.PNG")!important;
 }
 .service-video{
     position:absolute;
@@ -761,15 +761,15 @@ html{scroll-behavior:smooth}
         0 0 40px rgba(245,196,0,.15);
 }
 .mixer{
-    background-image:url("../assets/tec-mixer.jpg");
+    background-image:url("../assets/tec-mixer.jpg")!important;
 }
 
 .bomba{
-    background-image:url("../assets/tec-bomba.jpg");
+    background-image:url("../assets/tec-bomba.jpg")!important;
 }
 
 .laboratorio{
-    background-image:url("../assets/tec-laboratorio.jpg");
+    background-image:url("../assets/tec-laboratorio.jpg")!important;
 }
 .machine{
     min-height:280px;
@@ -822,15 +822,15 @@ html{scroll-behavior:smooth}
         0 0 40px rgba(245,196,0,.15);
 }
 .mezcladora{
-    background-image:url("../assets/maq-mezcladora.jpg");
+    background-image:url("../assets/maq-mezcladora.jpg")!important;
 }
 
 .planta{
-    background-image:url("../assets/maq-planta.jpg");
+    background-image:url("../assets/maq-planta.jpg")!important;
 }
 
 .camionbomba{
-    background-image:url("../assets/maq-camionbomba.jpg");
+    background-image:url("../assets/maq-camionbomba.jpg")!important;
 }
 
 /* ===================================
