@@ -1026,4 +1026,7 @@ h2{
 }
 .valores{
     background-image:url("../assets/social/valores2.jpeg") !important;
+    background-size:90%;
+    background-position:center;
+    background-repeat:no-repeat;
 }
