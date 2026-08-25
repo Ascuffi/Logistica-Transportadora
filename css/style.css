@@ -376,6 +376,9 @@ h2{font-size:1.9rem;margin:0 0 10px}
     .cards{
         grid-template-columns:1fr;
     }
+    .main-nav.show{
+        display:flex;
+    }
     .equip-grid{
         grid-template-columns:1fr;
     }
