@@ -368,24 +368,90 @@ h2{font-size:1.9rem;margin:0 0 10px}
     object-fit:contain;
 }
 /* Responsive */
-@media (max-width:1100px){
+@media (max-width:820px){
   .gallery{grid-template-columns:repeat(3,1fr)}
   .services-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:820px){
-  .cards{grid-template-columns:1fr}
-  .equip-grid{grid-template-columns:1fr}
-  .machine-grid{grid-template-columns:1fr}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .media-grid{grid-template-columns:1fr}
-  .social-row{flex-direction:column}
-  .contact-grid{grid-template-columns:1fr}
-  .footer-inner{flex-direction:column;align-items:flex-start}
-  .nav-toggle{display:block}
-  .main-nav{display:none;position:fixed;top:70px;right:18px;background:rgba(16,16,16,0.98);padding:12px;border-radius:8px;flex-direction:column}
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .equip-grid{
+        grid-template-columns:1fr;
+    }
+    .machine-grid{
+        grid-template-columns:1fr;
+    }
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .social-row{
+        grid-template-columns:1fr;
+    }
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+    .footer-inner{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+    .nav-toggle{
+    display:none;
+    background:none;
+    border:2px solid rgba(245,196,0,.25);
+    border-radius:10px;
+    color:white;
+    font-size:1.8rem;
+    width:48px;
+    height:48px;
+    cursor:pointer;
+    transition:.3s ease;
 }
-section{
-    scroll-margin-top:120px;
+.nav-toggle:hover{
+    color:var(--yellow);
+    border-color:var(--yellow);
+    box-shadow:
+        0 0 15px rgba(245,196,0,.25);
+}
+    }
+    .logo{
+        height:70px;
+    }
+    .main-nav{
+        display:none;
+        position:fixed;
+        top:90px;
+        right:15px;
+        width:270px;
+        background:rgba(15,15,15,.97);
+        backdrop-filter:blur(16px);
+        border:1px solid rgba(245,196,0,.20);
+        border-radius:16px;
+        padding:15px;
+        flex-direction:column;
+        gap:5px;
+        box-shadow:
+            0 0 25px rgba(245,196,0,.15);
+    }
+    .main-nav a{
+        width:100%;
+        padding:12px;
+    }
+    h2{
+        font-size:2rem;
+        text-align:center;
+    }
+    .lead{
+        text-align:center;
+    }
+    .hero h1{
+        font-size:2.2rem;
+    }
+    .hero-cta{
+        flex-direction:column;
+        align-items:center;
+    }
 }
 html{scroll-behavior:smooth}
 /* ============================
@@ -875,4 +941,19 @@ h2{
     text-shadow:
         0 1px 6px rgba(0,0,0,.8),
         0 0 10px rgba(245,196,0,.08);
+}
+/* ============================
+   MENU HAMBURGUESA
+============================ */
+.nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:2rem;
+    cursor:pointer;
+    transition:.3s ease;
+}
+.nav-toggle:hover{
+    color:var(--yellow);
 }
