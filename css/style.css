@@ -495,7 +495,7 @@ html{scroll-behavior:smooth}
     position:absolute;
     inset:0;
     background:linear-gradient(
-        rgba(0,0,0,.30),
+        rgba(0,0,0,.35),
         rgba(0,0,0,.85)
     );
     z-index:1;
@@ -519,7 +519,7 @@ html{scroll-behavior:smooth}
         0 10px 30px rgba(0,0,0,.4);
 }
 .hormigon{
-    background-image:url("../assets/laboratorio.MP4");
+    background-image:url("../assets/Laboratorio1.webp");
 }
 .transporte{
     background-image:url("../assets/img37.PNG");
@@ -537,4 +537,32 @@ html{scroll-behavior:smooth}
     height:100%;
     object-fit:cover;
     z-index:0;
+}
+/* ===================================
+   EFECTO PREMIUM GLOBAL LT HORMIGONES
+=================================== */
+.card,
+.service,
+.equip,
+.machine,
+.gallery-item,
+.media-item,
+.social-card,
+.contact-card{
+    border:2px solid transparent;
+    transition:all .35s ease;
+}
+.card:hover,
+.service:hover,
+.equip:hover,
+.machine:hover,
+.gallery-item:hover,
+.media-item:hover,
+.social-card:hover,
+.contact-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--yellow);
+    box-shadow:
+        0 0 20px rgba(245,196,0,.35),
+        0 0 40px rgba(245,196,0,.15);
 }
