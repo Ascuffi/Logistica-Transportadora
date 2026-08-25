@@ -745,82 +745,89 @@ html{scroll-behavior:smooth}
 .camionbomba{
     background-image:url("../assets/maq-camionbomba.jpg");
 }
+
 /* ===================================
    FONDO CORPORATIVO LT HORMIGONES
 =================================== */
 
 .lt-bg{
     position:relative;
-    background:#101010;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f0f0f,
+            #151515,
+            #101010,
+            #181818
+        );
+
+    background-size:400% 400%;
+
+    animation:gradientLT 18s ease infinite;
+
     overflow:hidden;
-}
-
-.lt-bg::before{
-    content:"";
-
-    position:absolute;
-
-    width:900px;
-    height:900px;
-
-    top:-350px;
-    left:-350px;
-
-    background:radial-gradient(
-        circle,
-        rgba(245,196,0,.08),
-        transparent 70%
-    );
-
-    animation:glowOne 18s ease-in-out infinite;
-
-    pointer-events:none;
-}
-
-.lt-bg::after{
-    content:"";
-
-    position:absolute;
-
-    width:800px;
-    height:800px;
-
-    bottom:-350px;
-    right:-350px;
-
-    background:radial-gradient(
-        circle,
-        rgba(245,196,0,.05),
-        transparent 70%
-    );
-
-    animation:glowTwo 22s ease-in-out infinite;
-
-    pointer-events:none;
 }
 
 .lt-bg .container{
     position:relative;
     z-index:2;
 }
-@keyframes glowOne{
+.lt-bg::before{
+    content:"";
 
-    0%,100%{
-        transform:translate(0,0);
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(245,196,0,.04),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(245,196,0,.03),
+            transparent 40%
+        );
+
+    pointer-events:none;
+}
+.lt-bg::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        );
+
+    background-size:80px 80px;
+
+    pointer-events:none;
+}
+@keyframes gradientLT{
+
+    0%{
+        background-position:0% 50%;
     }
 
     50%{
-        transform:translate(180px,120px);
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
     }
 }
-
-@keyframes glowTwo{
-
-    0%,100%{
-        transform:translate(0,0);
-    }
-
-    50%{
-        transform:translate(-180px,-120px);
-    }
-}
+``
