@@ -421,8 +421,16 @@ h2{font-size:1.9rem;margin:0 0 10px}
 }
     }
     .logo{
-        height:95px;
+        height:110px;
     }
+.logo{
+    filter:
+        drop-shadow(0 0 8px rgba(245,196,0,.35))
+        drop-shadow(0 0 18px rgba(245,196,0,.15));
+}
+.logo{
+    animation:logoFloat 5s ease-in-out infinite;
+}
     .main-nav{
         display:flex;
         position:fixed;
@@ -546,6 +554,14 @@ html{scroll-behavior:smooth}
     }
     100%{
         box-shadow:0 0 0 0 rgba(245,196,0,0);
+    }
+}
+@keyframes logoFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-3px);
     }
 }
 .service{
