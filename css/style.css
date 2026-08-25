@@ -411,7 +411,7 @@ html{scroll-behavior:smooth}
 /* ============================
    SECCIÓN NOSOTROS
 ============================ */
-#nosotros{
+/*#nosotros{
     position: relative;
     background:
         linear-gradient(
@@ -423,7 +423,7 @@ html{scroll-behavior:smooth}
     background-position: center;
     background-repeat: no-repeat;
     min-height: 700px;
-}
+}*/
 /* Títulos y textos más legibles */
 #nosotros h2,
 #nosotros h3,
@@ -569,7 +569,7 @@ html{scroll-behavior:smooth}
 /* ============================
    PRODUCTOS Y SERVICIOS
 ============================ */
-#productos{
+/*#productos{
     position:relative;
     background:
         linear-gradient(
@@ -580,7 +580,7 @@ html{scroll-behavior:smooth}
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-}
+}*/
 #productos h2,
 #productos .lead{
     color:#fff;
@@ -593,7 +593,7 @@ html{scroll-behavior:smooth}
    TECNOLOGÍA + MAQUINARIAS
 ============================ */
 
-.tecnologia-wrapper{
+/*.tecnologia-wrapper{
     background:
         linear-gradient(
             rgba(0,0,0,.85),
@@ -603,7 +603,7 @@ html{scroll-behavior:smooth}
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-}
+}*/
 #tecnologia{
     padding-bottom:30px;
 }
