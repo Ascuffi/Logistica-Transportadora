@@ -716,87 +716,69 @@ html{scroll-behavior:smooth}
     color:rgba(255,255,255,.95);
 }
 .equip{
-    min-height:280px;
-
+    min-height:340px;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
-
     padding:25px;
-
     position:relative;
-
     overflow:hidden;
-
     border-radius:14px;
-
     background-size:cover;
     background-position:center;
-
     border:2px solid transparent;
-
     transition:all .35s ease;
 }
-
 .equip::before{
     content:"";
     position:absolute;
     inset:0;
-
     background:linear-gradient(
-        rgba(0,0,0,.25),
-        rgba(0,0,0,.85)
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.90)
     );
-
     z-index:1;
 }
-
 .equip h5,
 .equip p{
     position:relative;
     z-index:2;
     color:white;
 }
-
 .equip:hover{
     transform:translateY(-8px);
-
     border-color:var(--yellow);
-
     box-shadow:
         0 0 20px rgba(245,196,0,.35),
         0 0 40px rgba(245,196,0,.15);
 }
 .mixer{
-    background-image:url("../assets/tec-mixer.jpg")!important;
+    background-image:url("../assets/img42.PNG") !important;
 }
-
 .bomba{
-    background-image:url("../assets/tec-bomba.jpg")!important;
+    background-image:url("../assets/img30.PNG") !important;
 }
-
 .laboratorio{
-    background-image:url("../assets/tec-laboratorio.jpg")!important;
+    background-image:url("../assets/laboratorio1.jpg") !important;
+}
+.mixer,
+.bomba,
+.laboratorio{
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 .machine{
     min-height:280px;
-
     display:flex;
     align-items:flex-end;
-
     padding:25px;
-
     position:relative;
-
     overflow:hidden;
-
     border-radius:14px;
-
     background-size:cover;
     background-position:center;
-
     border:2px solid transparent;
-
     transition:all .35s ease;
 }
 
@@ -804,26 +786,20 @@ html{scroll-behavior:smooth}
     content:"";
     position:absolute;
     inset:0;
-
     background:linear-gradient(
         rgba(0,0,0,.25),
         rgba(0,0,0,.85)
     );
-
     z-index:1;
 }
-
 .machine h5{
     position:relative;
     z-index:2;
     color:white;
 }
-
 .machine:hover{
     transform:translateY(-8px);
-
     border-color:var(--yellow);
-
     box-shadow:
         0 0 20px rgba(245,196,0,.35),
         0 0 40px rgba(245,196,0,.15);
@@ -831,15 +807,12 @@ html{scroll-behavior:smooth}
 .mezcladora{
     background-image:url("../assets/maq-mezcladora.jpg")!important;
 }
-
 .planta{
     background-image:url("../assets/maq-planta.jpg")!important;
 }
-
 .camionbomba{
     background-image:url("../assets/maq-camionbomba.jpg")!important;
 }
-
 /* ===================================
    LT INDUSTRIAL PREMIUM
 =================================== */
