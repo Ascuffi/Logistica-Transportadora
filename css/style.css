@@ -1005,3 +1005,42 @@ h2{
 
     z-index:9999;
 }
+/* ============================
+   NOSOTROS CON IMAGENES
+============================ */
+
+#nosotros .card{
+    min-height*280px;
+    display:flex;
+    flex*direction:column;
+    justify-cont*nt:flex-end;
+    position:relativ*;
+    overflow:hidden;
+    backgr*und-size:cover;
+    background-pos*tion:center;
+    padding:25px;
+ *  border-radius:14px;
+}
+#nosotros*.card::before{
+    content:"";
+   *position:absolute;
+    inset:0;
+ *  background:linear-gradient(
+    *   rgba(0,0,0,.35),
+        rgba(0*0,0,.85)
+    );
+    z-index:1;
+}
+*#nosotros .card h3,
+#nosotros .car* p{
+    position:relative;
+    z-i*dex:2;
+}
+.mision{
+    background-*mage:url("../assets/social/mision.webp");*}
+.vision{
+    background-image:u*l("../assets/social/vision.jpg");
+}
+.val*res{
+    background-image:url("../*ssets/social/valores1.jpg");
+}
