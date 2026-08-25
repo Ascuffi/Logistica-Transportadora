@@ -351,16 +351,71 @@ section{
     scroll-margin-top:120px;
 }
 html{scroll-behavior:smooth}
+/* ============================
+   HEADER MÁS VISIBLE
+============================ */
+.site-header{
+    background: rgba(16,16,16,.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 5px 25px rgba(0,0,0,.35);
+}
+.main-nav a{
+    color: #fff;
+    font-weight: 700;
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.9),
+        0 0 15px rgba(0,0,0,.6);
+}
+.main-nav a:hover{
+    color: var(--yellow);
+    background: rgba(245,196,0,.10);
+}
+/* ============================
+   SECCIÓN NOSOTROS
+============================ */
 #nosotros{
-    background:url("../assets/img31.PNG");
+    position: relative;
+    background:
         linear-gradient(
-            rgba(16,16,16,.55),
-            rgba(16,16,16,.55)
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.82)
         ),
         url("../assets/img31.PNG");
-
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     min-height: 700px;
+}
+/* Títulos y textos más legibles */
+#nosotros h2,
+#nosotros h3,
+#nosotros p{
+    color: #fff;
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.9),
+        0 0 20px rgba(0,0,0,.6);
+}
+#nosotros .lead{
+    color: rgba(255,255,255,.95);
+}
+/* Tarjetas premium */
+#nosotros .card{
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+#nosotros .card h3{
+    color: #fff;
+}
+#nosotros .card:hover{
+    border-color: var(--yellow);
+    background: rgba(0,0,0,.65);
+    box-shadow:
+        0 0 20px rgba(245,196,0,.35),
+        0 0 40px rgba(245,196,0,.15);
+}
+#nosotros .card:hover h3{
+    color: var(--yellow);
 }
