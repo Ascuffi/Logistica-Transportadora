@@ -73,7 +73,6 @@ body{
     z-index:999;
     background:rgba(16,16,16,0.05);
     backdrop-filter:blur(4px);
-    border-bottom:1px solid transparent;
     transition:
         background .4s ease,
         backdrop-filter .4s ease,
