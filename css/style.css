@@ -593,18 +593,22 @@ html{scroll-behavior:smooth}
    TECNOLOGÍA + MAQUINARIAS
 ============================ */
 
-#tecnologia,
-#maquinaria{
-    position:relative;
+.tecnologia-wrapper{
     background:
         linear-gradient(
             rgba(0,0,0,.85),
             rgba(0,0,0,.85)
         ),
-        url("../assets/social/tecnologia.webp");
+        url("../assets/fondo-tecnologia.PNG");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+}
+#tecnologia{
+    padding-bottom:30px;
+}
+#maquinaria{
+    padding-top:0;
 }
 #tecnologia h2,
 #maquinaria h2{
