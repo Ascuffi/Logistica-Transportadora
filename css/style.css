@@ -978,13 +978,30 @@ h2{
 ============================ */
 .nav-toggle{
     display:none;
-    background:none;
-    border:none;
-    color:#fff;
+
+    position:absolute;
+    right:20px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:48px;
+    height:48px;
+
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(15,15,15,.9);
+
+    border:1px solid rgba(245,196,0,.25);
+
+    border-radius:10px;
+
+    color:white;
+
     font-size:2rem;
+
     cursor:pointer;
-    transition:.3s ease;
-}
-.nav-toggle:hover{
-    color:var(--yellow);
+
+    z-index:9999;
 }
