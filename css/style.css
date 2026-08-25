@@ -43,8 +43,12 @@ body{
     width:auto;
 }
 .logo-footer-small{
-    height:140px;
+    height:120px;
     width:auto;
+    filter:
+        drop-shadow(0 0 8px rgba(245,196,0,.35))
+        drop-shadow(0 0 18px rgba(245,196,0,.15));
+    animation:logoFloat 5s ease-in-out infinite;
 }
 .brand-contact{
     display:flex;
