@@ -27,7 +27,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:14px 0;
+    padding:0;
     transition:padding .3s ease;
 }
 .brand{font-weight:800;color:var(--white);text-decoration:none;font-size:1.05rem;display:flex;align-items:center;gap:12px}
@@ -83,7 +83,7 @@ body{
     box-shadow:0 5px 25px rgba(0,0,0,.35);
 }
 .site-header.scrolled .header-inner{
-    padding:8px 0;
+    padding:0;
 }
 /*borrar
 .site-header:hover{
