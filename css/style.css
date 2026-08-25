@@ -827,18 +827,26 @@ html{scroll-behavior:smooth}
 
     border:2px solid rgba(255,255,255,.04);
 }
-.card:hover,
-.service:hover,
-.equip:hover,
-.machine:hover,
-.contact-card:hover{
-    border-color:var(--yellow);
+.card:hover h3,
+.service:hover h4,
+.equip:hover h5,
+.machine:hover h5{
+    color:var(--yellow);
 
-    box-shadow:
-        0 0 20px rgba(245,196,0,.30),
-        0 0 40px rgba(245,196,0,.12);
+    text-shadow:
+        0 0 10px rgba(245,196,0,.40),
+        0 0 20px rgba(245,196,0,.20);
+}
+.card h3,
+.service h4,
+.equip h5,
+.machine h5{
+    color:#fff;
 
-    transform:translateY(-8px);
+    text-shadow:
+        0 0 8px rgba(245,196,0,.12);
+
+    transition:.3s ease;
 }
 h2{
     color:#fff;
@@ -850,4 +858,21 @@ h2{
 
 .lead{
     color:rgba(255,255,255,.85);
+}
+h2{
+    color:#fff;
+
+    font-weight:800;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.9),
+        0 0 8px rgba(245,196,0,.20),
+        0 0 18px rgba(245,196,0,.10);
+}
+.lead{
+    color:rgba(255,255,255,.85);
+
+    text-shadow:
+        0 1px 6px rgba(0,0,0,.8),
+        0 0 10px rgba(245,196,0,.08);
 }
