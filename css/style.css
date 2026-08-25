@@ -985,8 +985,9 @@ h2{
 #nosotros .card{
     min-height*280px;
     display:flex;
-    flex*direction:column;
-    justify-cont*nt:flex-end;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     position:relativ*;
     overflow:hidden;
     backgr*und-size:cover;
@@ -1004,10 +1005,18 @@ h2{
     );
     z-index:1;
 }
-*#nosotros .card h3,
-#nosotros .car* p{
+#nosotros .card h3{
     position:relative;
-    z-i*dex:2;
+    z-index:2;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+#nosotros .card p{
+    position:relative;
+    z-index:2;
+    max-width:85%;
+    margin:0 auto;
+    line-height:1.5;
 }
 .mision{
     background-image:url("../assets/social/mision.webp") !important;
