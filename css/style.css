@@ -745,3 +745,82 @@ html{scroll-behavior:smooth}
 .camionbomba{
     background-image:url("../assets/maq-camionbomba.jpg");
 }
+/* ===================================
+   FONDO CORPORATIVO LT HORMIGONES
+=================================== */
+
+.lt-bg{
+    position:relative;
+    background:#101010;
+    overflow:hidden;
+}
+
+.lt-bg::before{
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    top:-350px;
+    left:-350px;
+
+    background:radial-gradient(
+        circle,
+        rgba(245,196,0,.08),
+        transparent 70%
+    );
+
+    animation:glowOne 18s ease-in-out infinite;
+
+    pointer-events:none;
+}
+
+.lt-bg::after{
+    content:"";
+
+    position:absolute;
+
+    width:800px;
+    height:800px;
+
+    bottom:-350px;
+    right:-350px;
+
+    background:radial-gradient(
+        circle,
+        rgba(245,196,0,.05),
+        transparent 70%
+    );
+
+    animation:glowTwo 22s ease-in-out infinite;
+
+    pointer-events:none;
+}
+
+.lt-bg .container{
+    position:relative;
+    z-index:2;
+}
+@keyframes glowOne{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(180px,120px);
+    }
+}
+
+@keyframes glowTwo{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-180px,-120px);
+    }
+}
