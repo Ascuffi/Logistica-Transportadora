@@ -135,3 +135,32 @@ window.addEventListener("scroll", () => {
     }
 
 });
+/* ============================
+   MENU HAMBURGUESA
+============================ */
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("main-nav");
+
+if (navToggle && navMenu) {
+
+    navToggle.addEventListener("click", () => {
+
+        navMenu.classList.toggle("show");
+
+    });
+
+}
+
+document.querySelectorAll(".main-nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        if (window.innerWidth <= 820) {
+
+            navMenu.classList.remove("show");
+
+        }
+
+    });
+
+});
