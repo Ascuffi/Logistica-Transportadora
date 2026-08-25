@@ -606,7 +606,7 @@ html{scroll-behavior:smooth}
         0 10px 30px rgba(0,0,0,.4);
 }
 .hormigon{
-    background-image:url("../assets/Laboratorio1.webp");
+    background-image:url("../assets/Laboratorio1.webp")!important;
 }
 .transporte{
     background-image:url("../assets/img37.PNG");
