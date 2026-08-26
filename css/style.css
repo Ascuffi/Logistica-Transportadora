@@ -805,13 +805,13 @@ html{scroll-behavior:smooth}
         0 0 40px rgba(245,196,0,.15);
 }
 .mezcladora{
-    background-image:url("../assets/social/fotomixer1.jpg") !important;
+    background-image:url("../assets/social/fotomixer1.png") !important;
 }
 .planta{
-    background-image:url("../assets/social/fotoniveladora1.jpg") !important;
+    background-image:url("../assets/social/fotoniveladora1.png") !important;
 }
 .camionbomba{
-    background-image:url("../assets/social/fotobomba2.jpg") !important;
+    background-image:url("../assets/social/fotobomba2.png") !important;
 }
 .gallery-link{
     position:relative;
