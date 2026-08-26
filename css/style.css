@@ -805,15 +805,14 @@ html{scroll-behavior:smooth}
         0 0 40px rgba(245,196,0,.15);
 }
 .mezcladora{
-    background-image:url("../assets/social/fotomixer1.jpg") !important;
+    background-image:url("../assets/fotomixer1.jpg") !important;
 }
 .planta{
-    background-image:url("../assets/social/fotoniveladora1.jpg") !important;
+    background-image:url("../assets/fotoniveladora1.jpg") !important;
 }
 .camionbomba{
-    background-image:url("../assets/social/fotobomba2.jpg") !important;
+    background-image:url("../assets/fotobomba2.jpg") !important;
 }
-``
 .gallery-link{
     position:relative;
     z-index:2;
@@ -827,7 +826,6 @@ html{scroll-behavior:smooth}
 .machine{
     cursor:pointer;
 }
-``
 /* ===================================
    LT INDUSTRIAL PREMIUM
 =================================== */
