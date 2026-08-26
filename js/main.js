@@ -217,4 +217,8 @@ document.querySelectorAll(".machine").forEach(card => {
                     src="${img}"
                     style="
                         width:100%;
-                 
+                 ml);
+
+    });
+
+});
