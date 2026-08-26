@@ -107,12 +107,12 @@ document.querySelectorAll(".machine").forEach(card => {
    VIDEOS OBRAS
 ============================ */
 const obrasVideos = [
-    "assets/videos/motobomba1.mov",
-    "assets/videos/obra2.mov",
+    /*"assets/videos/motobomba1.mov",*/
+    /*"assets/videos/obra2.mov",*/
     "assets/videos/obra17.mp4",
     "assets/videos/obra21.mp4",
-    "assets/videos/obra3.mov",
-    "assets/videos/topadora2.mov"
+    /*"assets/videos/obra3.mov",*/
+    /*"assets/videos/topadora2.mov"*/
 ];
 const worksGallery = document.getElementById("works-gallery");
 if (worksGallery) {
