@@ -164,3 +164,57 @@ document.querySelectorAll(".main-nav a").forEach(link => {
     });
 
 });
+/* ============================
+   GALERIA MAQUINARIAS
+============================ */
+
+const machineGallery = {
+
+    mezcladora: [
+        "assets/social/fotomixer1.jpg",
+        "assets/social/fotomixer2.jpg",
+        "assets/social/fotomixer4.jpg",
+        "assets/social/fotomixer6.jpg"
+    ],
+
+    planta: [
+        "assets/social/fotoniveladora1.jpg",
+        "assets/social/fotopison1.jpg",
+        "assets/social/fototractor2.jpg",
+        "assets/social/fototopa4.jpg"
+    ],
+
+    camionbomba: [
+        "assets/social/fotobomba2.jpg",
+        "assets/social/fotobomba10.jpg",
+        "assets/social/fotobomba23.jpg",
+        "assets/social/fotobomba33.jpg"
+    ]
+
+};
+
+document.querySelectorAll(".machine").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        const type = card.dataset.gallery;
+
+        if(!machineGallery[type]) return;
+
+        let galleryHtml = `
+            <div style="
+                display:grid;
+                grid-template-columns:repeat(2,1fr);
+                gap:15px;
+                padding:20px;
+            ">
+        `;
+
+        machineGallery[type].forEach(img => {
+
+            galleryHtml += `
+                <img
+                    src="${img}"
+                    style="
+                        width:100%;
+                 
