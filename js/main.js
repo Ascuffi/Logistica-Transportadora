@@ -80,7 +80,7 @@ document.querySelectorAll(".machine").forEach(card => {
             ">
         `;
 
-       machineGallery[type].forEach(img => {
+    machineGallery[type].forEach(img => {
 
     galleryHtml += `
         <img
@@ -89,7 +89,9 @@ document.querySelectorAll(".machine").forEach(card => {
                 width:100%;
                 border-radius:10px;
                 cursor:pointer;
-                />
+            "
+        >
+    `
         });
 
         galleryHtml += `</div>`;
