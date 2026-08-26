@@ -805,14 +805,28 @@ html{scroll-behavior:smooth}
         0 0 40px rgba(245,196,0,.15);
 }
 .mezcladora{
-    background-image:url("../assets/maq-mezcladora.jpg")!important;
+    background-image:url("../assets/img15.PNG")!important;
 }
 .planta{
-    background-image:url("../assets/maq-planta.jpg")!important;
+    background-image:url("../assets/img49.jpeg")!important;
 }
 .camionbomba{
-    background-image:url("../assets/maq-camionbomba.jpg")!important;
+    background-image:url("../assets/img39.PNG")!important;
 }
+.gallery-link{
+    position:relative;
+    z-index:2;
+    display:block;
+    margin-top:12px;
+    color:var(--yellow);
+    font-weight:700;
+    text-align:center;
+    opacity:.9;
+}
+.machine{
+    cursor:pointer;
+}
+``
 /* ===================================
    LT INDUSTRIAL PREMIUM
 =================================== */
