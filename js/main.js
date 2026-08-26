@@ -99,8 +99,43 @@ document.querySelectorAll(".machine").forEach(card => {
     });
 
 });
+/* ============================
+   VIDEOS OBRAS
+============================ */
+const obrasVideos = [
+    "assets/videos/motobomba1.mov",
+    "assets/videos/obra2.mov",
+    "assets/videos/obra17.mp4",
+    "assets/videos/obra21.mp4",
+    "assets/videos/obra3.mov",
+    "assets/videos/topadora2.mov"
+];
+const worksGallery = document.getElementById("works-gallery");
+if (worksGallery) {
+    obrasVideos.forEach(video => {
+        const item = document.createElement("div");
+        item.className = "gallery-item";
+        item.innerHTML = `
+            <div class="video-thumb">
+                ▶
+            </div>
+        `;
+        item.addEventListener("click", () => {
+            openModal(`
+                <video
+                    controls
+                    autoplay
+                    style="width:100%;height:100%;object-fit:contain;"
+                >
+                    ${video}
+                </video>
+            `);
+        });
+        worksGallery.appendChild(item);
+    });
+}
   // Carga dinámica de galería de obras (assets/works/work1.jpg ... work8.jpg)
-  const worksContainer = document.getElementById('works-gallery');
+  /*const worksContainer = document.getElementById('works-gallery');
   if(worksContainer){
     for(let i=1;i<=8;i++){
       const src = `assets/works/work${i}.jpg`;
@@ -117,7 +152,7 @@ document.querySelectorAll(".machine").forEach(card => {
         worksContainer.appendChild(fig);
       };
     }
-  }
+  }*/
   // Carga dinámica multimedia (assets/media/media1.jpg y assets/media/media1.mp4)
   const mediaContainer = document.getElementById('media-grid');
   if(mediaContainer){
