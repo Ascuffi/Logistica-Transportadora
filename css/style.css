@@ -1050,3 +1050,19 @@ h2{
     background-position:center;
     background-repeat:no-repeat;
 }
+.video-thumb{
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(20,20,20,.85);
+    border-radius:12px;
+    font-size:4rem;
+    color:white;
+    transition:.3s ease;
+    cursor:pointer;
+}
+.video-thumb:hover{
+    color:var(--yellow);
+    transform:scale(1.03);
+}
