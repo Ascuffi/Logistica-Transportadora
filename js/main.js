@@ -39,29 +39,38 @@ document.addEventListener('DOMContentLoaded', function(){
    GALERIA MAQUINARIAS
 ============================ */
 const machineGallery = {
+
     mezcladora: [
         "assets/social/fotomixer1.png",
         "assets/social/fotomixer2.png",
         "assets/social/fotomixer4.png",
         "assets/social/fotomixer6.png"
     ],
+
     planta: [
         "assets/social/fotoniveladora1.png",
         "assets/social/fotopison1.png",
         "assets/social/fototractor2.png",
         "assets/social/fototopa4.png"
     ],
+
     camionbomba: [
         "assets/social/fotobomba2.png",
         "assets/social/fotobomba10.png",
         "assets/social/fotobomba23.png",
         "assets/social/fotobomba33.png"
     ]
+
 };
+
 document.querySelectorAll(".machine").forEach(card => {
+
     card.addEventListener("click", () => {
+
         const type = card.dataset.gallery;
+
         if (!machineGallery[type]) return;
+
         let galleryHtml = `
             <div style="
                 display:grid;
@@ -70,14 +79,25 @@ document.querySelectorAll(".machine").forEach(card => {
                 padding:20px;
             ">
         `;
-        machineGallery[type].forEach(img => {
-            galleryHtml += `
-                <img
-                    src="${img}"
-                    style="
-                      `;
+
+       machineGallery[type].forEach(img => {
+
+    galleryHtml += `
+        <img
+            src="${img}"
+            style="
+                width:100%;
+                border-radius:10px;
+                cursor:pointer;
+                />
+        });
+
+        galleryHtml += `</div>`;
+
         openModal(galleryHtml);
+
     });
+
 });
   // Carga dinámica de galería de obras (assets/works/work1.jpg ... work8.jpg)
   const worksContainer = document.getElementById('works-gallery');
