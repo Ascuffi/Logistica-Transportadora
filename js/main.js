@@ -171,24 +171,24 @@ document.querySelectorAll(".main-nav a").forEach(link => {
 const machineGallery = {
 
     mezcladora: [
-        "assets/social/fotomixer1.jpg",
-        "assets/social/fotomixer2.jpg",
-        "assets/social/fotomixer4.jpg",
-        "assets/social/fotomixer6.jpg"
+        "assets/social/fotomixer1.png",
+        "assets/social/fotomixer2.png",
+        "assets/social/fotomixer4.png",
+        "assets/social/fotomixer6.png"
     ],
 
     planta: [
-        "assets/social/fotoniveladora1.jpg",
-        "assets/social/fotopison1.jpg",
-        "assets/social/fototractor2.jpg",
-        "assets/social/fototopa4.jpg"
+        "assets/social/fotoniveladora1.png",
+        "assets/social/fotopison1.png",
+        "assets/social/fototractor2.png",
+        "assets/social/fototopa4.png"
     ],
 
     camionbomba: [
-        "assets/social/fotobomba2.jpg",
-        "assets/social/fotobomba10.jpg",
-        "assets/social/fotobomba23.jpg",
-        "assets/social/fotobomba33.jpg"
+        "assets/social/fotobomba2.png",
+        "assets/social/fotobomba10.png",
+        "assets/social/fotobomba23.png",
+        "assets/social/fotobomba33.png"
     ]
 
 };
