@@ -90,7 +90,7 @@ document.querySelectorAll(".machine").forEach(card => {
                 border-radius:10px;
                 cursor:pointer;
             "
-        >
+        />
     `
         });
 
