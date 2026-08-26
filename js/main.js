@@ -1,22 +1,24 @@
 // js/main.js - Interacciones y carga dinámica de assets
 document.addEventListener('DOMContentLoaded', function(){
   // Año en footer
-  const yearEl = document.getElementById('year');
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
-
   // Toggle menú móvil
-    if(getComputedStyle(nav).display === 'flex'){
-      nav.style.display = 'none';
-    } else {
-      nav.style.display = 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.padding = '12px';
-    }
-  });
+const navToggle = document.getElementById('nav-toggle');
+const nav = document.getElementById('main-nav');
+if(navToggle && nav){
+    navToggle.addEventListener('click', () => {
+        if(getComputedStyle(nav).display === 'flex'){
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'flex';
+            nav.style.flexDirection = 'column';
+            nav.style.padding = '12px';
+        }
+    });
+}
   // Cerrar menú al hacer click en enlace
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=>{
     if(window.innerWidth <= 820) nav.style.display = 'none';
-  }));
+}));
 
   // Modal para galería y multimedia
   const modal = document.getElementById('modal');
@@ -91,7 +93,7 @@ document.querySelectorAll(".machine").forEach(card => {
                 cursor:pointer;
             "
         />
-    `
+    `;
         });
 
         galleryHtml += `</div>`;
