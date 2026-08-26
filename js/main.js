@@ -125,13 +125,12 @@ if (worksGallery) {
             </div>
         `;
         item.addEventListener("click", () => {
-            openModal(`
-                <video
-                    controls
-                    autoplay
-                    style="width:100%;height:100%;object-fit:contain;"
-                >
-                    ${video}
+    openModal(`
+        <video
+            src="${video}"
+            controls
+            autoplay
+            style="width:100%;height:100%;object-fit:contain;"
                 </video>
             `);
         });
