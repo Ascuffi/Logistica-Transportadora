@@ -362,7 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/social/recuadro1.png",
 
             video:
-                "assets/videos/laboratorio.mp4",
+                "assets/videos/obra2.mp4",
 
             title:
                 "Laboratorio"
@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/social/recuadro2.png",
 
             video:
-                "assets/videos/motobomba1.mp4",
+                "assets/videos/topadora1.mp4",
 
             title:
                 "Motobomba"
@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/social/recuadro4.png",
 
             video:
-                "assets/videos/obra2.mp4",
+                "assets/videos/obra14.mp4",
 
             title:
                 "Obra"
@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/social/recuadro5.png",
 
             video:
-                "assets/videos/obra21.mp4",
+                "assets/videos/videomixer4.mp4",
 
             title:
                 "Obra"
@@ -417,7 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/social/recuadro6.png",
 
             video:
-                "assets/videos/topadora2.mp4",
+                "assets/videos/laboratorio.mp4",
 
             title:
                 "Topadora"
