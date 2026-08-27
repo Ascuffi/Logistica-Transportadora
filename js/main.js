@@ -1,265 +1,926 @@
-// js/main.js - Interacciones y carga dinámica de assets
-document.addEventListener('DOMContentLoaded', function(){
-  // Año en footer
-  // Toggle menú móvil
-const navToggle = document.getElementById('nav-toggle');
-const nav = document.getElementById('main-nav');
-if(navToggle && nav){
-    navToggle.addEventListener('click', () => {
-        if(getComputedStyle(nav).display === 'flex'){
-            nav.style.display = 'none';
-        } else {
-            nav.style.display = 'flex';
-            nav.style.flexDirection = 'column';
-            nav.style.padding = '12px';
-        }
-    });
-}
-  // Cerrar menú al hacer click en enlace
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=>{
-    if(window.innerWidth <= 820) nav.style.display = 'none';
-}));
+// ============================================================
+// LT HORMIGONES
+// main.js
+// Interacciones y carga dinámica
+// ============================================================
 
-  // Modal para galería y multimedia
-  const modal = document.getElementById('modal');
-  const modalContent = document.getElementById('modal-content');
-  const modalClose = document.getElementById('modal-close');
+document.addEventListener("DOMContentLoaded", () => {
 
-  function openModal(html){
-    modalContent.innerHTML = html;
-    modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(){
-    modal.setAttribute('aria-hidden','true');
-    modalContent.innerHTML = '';
-    document.body.style.overflow = '';
-  }
-  modalClose.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
-/* ============================
-   GALERIA MAQUINARIAS
-============================ */
-const machineGallery = {
 
-    mezcladora: [
-        "assets/social/fotomixer1.png",
-        "assets/social/fotomixer2.png",
-        "assets/social/fotomixer4.png",
-        "assets/social/fotomixer6.png"
-    ],
+    // ========================================================
+    // AÑO DEL FOOTER
+    // ========================================================
 
-    planta: [
-        "assets/social/fotoniveladora1.png",
-        "assets/social/fotopison1.png",
-        "assets/social/fototractor2.png",
-        "assets/social/fototopa4.png"
-    ],
+    const year = document.getElementById("year");
 
-    camionbomba: [
-        "assets/social/fotobomba2.png",
-        "assets/social/fotobomba10.png",
-        "assets/social/fotobomba23.png",
-        "assets/social/fotobomba33.png"
-    ]
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
-};
 
-document.querySelectorAll(".machine").forEach(card => {
+    // ========================================================
+    // MENÚ MÓVIL
+    // ========================================================
 
-    card.addEventListener("click", () => {
+    const navToggle = document.getElementById("nav-toggle");
+    const nav = document.getElementById("main-nav");
 
-        const type = card.dataset.gallery;
+    if (navToggle && nav) {
 
-        if (!machineGallery[type]) return;
+        navToggle.addEventListener("click", () => {
 
-        let galleryHtml = `
-            <div style="
-                display:grid;
-                grid-template-columns:repeat(2,1fr);
-                gap:15px;
-                padding:20px;
-            ">
-        `;
+            const isOpen =
+                nav.classList.toggle("is-open");
 
-    machineGallery[type].forEach(img => {
+            navToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
 
-    galleryHtml += `
-        <img
-            src="${img}"
-            style="
-                width:100%;
-                border-radius:10px;
-                cursor:pointer;
-            "
-        />
-    `;
+            navToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Cerrar menú"
+                    : "Abrir menú"
+            );
+
         });
 
-        galleryHtml += `</div>`;
 
-        openModal(galleryHtml);
+        // Cerrar al seleccionar una sección
+
+        const navLinks =
+            nav.querySelectorAll("a");
+
+        navLinks.forEach((link) => {
+
+            link.addEventListener("click", () => {
+
+                if (window.innerWidth <= 820) {
+
+                    nav.classList.remove("is-open");
+
+                    navToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    navToggle.setAttribute(
+                        "aria-label",
+                        "Abrir menú"
+                    );
+
+                }
+
+            });
+
+        });
+
+
+        // Cerrar automáticamente al volver a escritorio
+
+        window.addEventListener("resize", () => {
+
+            if (window.innerWidth > 820) {
+
+                nav.classList.remove("is-open");
+
+                navToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                navToggle.setAttribute(
+                    "aria-label",
+                    "Abrir menú"
+                );
+
+            }
+
+        });
+
+    }
+
+
+    // ========================================================
+    // MODAL
+    // ========================================================
+
+    const modal =
+        document.getElementById("modal");
+
+    const modalContent =
+        document.getElementById("modal-content");
+
+    const modalClose =
+        document.getElementById("modal-close");
+
+
+    function openModal(content) {
+
+        if (!modal || !modalContent) {
+            return;
+        }
+
+        modalContent.innerHTML = content;
+
+        modal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.classList.add(
+            "modal-open"
+        );
+
+    }
+
+
+    function closeModal() {
+
+        if (!modal || !modalContent) {
+            return;
+        }
+
+
+        // Detener todos los videos
+
+        const videos =
+            modalContent.querySelectorAll("video");
+
+        videos.forEach((video) => {
+
+            try {
+
+                video.pause();
+
+                video.currentTime = 0;
+
+            } catch (error) {
+
+                console.warn(
+                    "No se pudo detener el video.",
+                    error
+                );
+
+            }
+
+        });
+
+
+        modalContent.innerHTML = "";
+
+        modal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "modal-open"
+        );
+
+    }
+
+
+    if (modalClose) {
+
+        modalClose.addEventListener(
+            "click",
+            closeModal
+        );
+
+    }
+
+
+    if (modal) {
+
+        modal.addEventListener(
+            "click",
+            (event) => {
+
+                if (event.target === modal) {
+                    closeModal();
+                }
+
+            }
+        );
+
+    }
+
+
+    // Cerrar con ESC
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (event.key !== "Escape") {
+                return;
+            }
+
+            if (
+                modal &&
+                modal.getAttribute("aria-hidden") === "false"
+            ) {
+                closeModal();
+            }
+
+        }
+    );
+
+
+    // ========================================================
+    // GALERÍA DE MAQUINARIAS
+    // ========================================================
+
+    const machineGallery = {
+
+        mezcladora: [
+            "assets/social/fotomixer1.png",
+            "assets/social/fotomixer2.png",
+            "assets/social/fotomixer4.png",
+            "assets/social/fotomixer6.png"
+        ],
+
+        planta: [
+            "assets/social/fotoniveladora1.png",
+            "assets/social/fotopison1.png",
+            "assets/social/fototractor2.png",
+            "assets/social/fototopa4.png"
+        ],
+
+        camionbomba: [
+            "assets/social/fotobomba2.png",
+            "assets/social/fotobomba10.png",
+            "assets/social/fotobomba23.png",
+            "assets/social/fotobomba33.png"
+        ]
+
+    };
+
+
+    const machineCards =
+        document.querySelectorAll(".machine");
+
+
+    machineCards.forEach((card) => {
+
+
+        function showMachineGallery() {
+
+            const type =
+                card.dataset.gallery;
+
+
+            if (!type) {
+                return;
+            }
+
+
+            const images =
+                machineGallery[type];
+
+
+            if (!images) {
+                console.warn(
+                    `No existe una galería para: ${type}`
+                );
+
+                return;
+            }
+
+
+            let galleryHTML = `
+                <div class="machine-gallery">
+            `;
+
+
+            images.forEach((image, index) => {
+
+                galleryHTML += `
+                    <div class="machine-gallery-item">
+
+                        <img
+                            src="${image}"
+                            alt="Maquinaria ${type} - imagen ${index + 1}"
+                            loading="lazy"
+                        >
+
+                    </div>
+                `;
+
+            });
+
+
+            galleryHTML += `
+                </div>
+            `;
+
+
+            openModal(galleryHTML);
+
+        }
+
+
+        card.addEventListener(
+            "click",
+            showMachineGallery
+        );
+
+
+        // Accesibilidad con teclado
+
+        card.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key === "Enter" ||
+                    event.key === " "
+                ) {
+
+                    event.preventDefault();
+
+                    showMachineGallery();
+
+                }
+
+            }
+        );
 
     });
 
-});
-/* ============================
-   VIDEOS OBRAS
-============================ */
 
-const obrasVideos = [
-{
-    thumb: "assets/social/recuadro1.png",
-    video: "assets/videos/laboratorio.mp4"
-},
-{
-    thumb: "assets/social/recuadro2.png",
-    video: "assets/videos/motobomba1.mp4"
-},
-{
-    thumb: "assets/social/recuadro3.png",
-    video: "assets/videos/obra17.mp4"
-},
-{
-    thumb: "assets/social/recuadro4.png",
-    video: "assets/videos/obra2.mp4"
-},
-{
-    thumb: "assets/social/recuadro5.png",
-    video: "assets/videos/obra21.mp4"
-},
-{
-    thumb: "assets/social/recuadro6.png",
-    video: "assets/videos/topadora2.mp4"
-}
-];
+    // ========================================================
+    // VIDEOS DE OBRAS
+    // ========================================================
 
-const worksGallery = document.getElementById("works-gallery");
+    const obrasVideos = [
 
-if (worksGallery) {
+        {
+            thumb:
+                "assets/social/recuadro1.png",
 
-    obrasVideos.forEach(item => {
+            video:
+                "assets/videos/laboratorio.mp4",
 
-        const card = document.createElement("div");
+            title:
+                "Laboratorio"
+        },
 
-        card.className = "gallery-item";
+        {
+            thumb:
+                "assets/social/recuadro2.png",
 
-        card.innerHTML = `
-            <div class="video-thumb">
+            video:
+                "assets/videos/motobomba1.mp4",
 
-                <img src="${item.thumb}" alt=" <div class="play-icon">
-                    ▶
+            title:
+                "Motobomba"
+        },
+
+        {
+            thumb:
+                "assets/social/recuadro3.png",
+
+            video:
+                "assets/videos/obra17.mp4",
+
+            title:
+                "Obra"
+        },
+
+        {
+            thumb:
+                "assets/social/recuadro4.png",
+
+            video:
+                "assets/videos/obra2.mp4",
+
+            title:
+                "Obra"
+        },
+
+        {
+            thumb:
+                "assets/social/recuadro5.png",
+
+            video:
+                "assets/videos/obra21.mp4",
+
+            title:
+                "Obra"
+        },
+
+        {
+            thumb:
+                "assets/social/recuadro6.png",
+
+            video:
+                "assets/videos/topadora2.mp4",
+
+            title:
+                "Topadora"
+        }
+
+    ];
+
+
+    const worksGallery =
+        document.getElementById(
+            "works-gallery"
+        );
+
+
+    if (worksGallery) {
+
+
+        obrasVideos.forEach((item) => {
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "gallery-item";
+
+
+            card.setAttribute(
+                "tabindex",
+                "0"
+            );
+
+
+            card.setAttribute(
+                "role",
+                "button"
+            );
+
+
+            card.setAttribute(
+                "aria-label",
+                `Reproducir video: ${item.title}`
+            );
+
+
+            card.innerHTML = `
+
+                <div class="video-thumb">
+
+                    <img
+                        src="${item.thumb}"
+                        alt="${item.title}"
+                        loading="lazy"
+                    >
+
+                    <div
+                        class="play-icon"
+                        aria-hidden="true"
+                    >
+                        ▶
+                    </div>
+
                 </div>
 
-            </div>
-        `;
+            `;
 
-        card.addEventListener("click", () => {
 
-            openModal(`
-                <video
-                    src="${item.video}"
-                    controls
-              ;
+            function playVideo() {
 
-    });
+                openModal(`
 
-}
-  // Carga dinámica de galería de obras (assets/works/work1.jpg ... work8.jpg)
-  /*const worksContainer = document.getElementById('works-gallery');
-  if(worksContainer){
-    for(let i=1;i<=8;i++){
-      const src = `assets/works/work${i}.jpg`;
-      const img = new Image();
-      img.src = src;
-      img.onload = () => {
-        const fig = document.createElement('figure');
-        fig.className = 'gallery-item';
-        fig.dataset.type = 'image';
-        fig.dataset.src = src;
-        img.alt = `Obra ${i}`;
-        fig.appendChild(img);
-        fig.addEventListener('click', ()=> openModal(`<img src="${src}" alt="Obra">`));
-        worksContainer.appendChild(fig);
-      };
-    }
-  }*/
-  // Carga dinámica multimedia (assets/media/media1.jpg y assets/media/media1.mp4)
-  const mediaContainer = document.getElementById('media-grid');
-  if(mediaContainer){
-    for(let i=1;i<=6;i++){
-      const thumb = `assets/media/media${i}.jpg`;
-      const video = `assets/media/media${i}.mp4`;
-      // Primero intentamos cargar thumb
-      const img = new Image();
-      img.src = thumb;
-      img.onload = () => {
-        const div = document.createElement('div');
-        div.className = 'media-item';
-        div.dataset.type = 'video';
-        // Si existe video local, lo abrimos en modal con <video>, si no, solo mostramos imagen
-        div.dataset.src = video;
-        img.alt = `Video ${i}`;
-        const play = document.createElement('span'); play.className='play'; play.textContent='▶';
-        div.appendChild(img);
-        div.appendChild(play);
-        div.addEventListener('click', ()=>{
-          // Verificar si existe el video (intentamos cargarlo)
-          fetch(video, {method:'HEAD'}).then(res=>{
-            if(res.ok){
-              openModal(`<video controls autoplay style=\"width:100%;height:100%\"><source src=\"${video}\" type=\"video/mp4\"></video>`);
-            } else {
-              // Si no existe video local, buscar posible youtube embed guardado en dataset (fallback)
-              // Por ahora abrimos la imagen en modal
-              openModal(`<img src=\"${thumb}\" alt=\"Video\">`);
+                    <div class="video-modal">
+
+                        <video
+                            controls
+                            autoplay
+                            playsinline
+                            preload="metadata"
+                        >
+
+                            <source
+                                src="${item.video}"
+                                type="video/mp4"
+                            >
+
+                            Tu navegador no puede reproducir este video.
+
+                        </video>
+
+                    </div>
+
+                `);
+
             }
-          }).catch(()=>{
-            openModal(`<img src=\"${thumb}\" alt=\"Media\">`);
-          });
+
+
+            card.addEventListener(
+                "click",
+                playVideo
+            );
+
+
+            card.addEventListener(
+                "keydown",
+                (event) => {
+
+                    if (
+                        event.key === "Enter" ||
+                        event.key === " "
+                    ) {
+
+                        event.preventDefault();
+
+                        playVideo();
+
+                    }
+
+                }
+            );
+
+
+            worksGallery.appendChild(card);
+
         });
-        mediaContainer.appendChild(div);
-      };
+
     }
-  }
 
-  // Social links (rellenar href en HTML o usando estas variables)
-  const facebookUrl = "https://www.facebook.com/share/167cMEvde2r/?mibextid=wwXIfr";
-  const instagramUrl = 'https://www.instagram.com/lthormigones?igsi=MXc1dDQ0OW1tM2RuYg==';
-  const fbLink = document.getElementById('facebook-link');
-  const igLink = document.getElementById('instagram-link');
-  if(fbLink) fbLink.href = facebookUrl;
-  if(igLink) igLink.href = instagramUrl;
 
-  // Feedback al enviar el formulario (compatible con Formspree)
-  const form = document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit', function(e){
-      // dejamos que el envío ocurra normalmente; añadimos feedback UX
-      setTimeout(()=>{
-        alert('Gracias. Tu mensaje fue enviado. Nos contactaremos a la brevedad.');
-        form.reset();
-      },400);
+    // ========================================================
+    // MULTIMEDIA
+    // ========================================================
+
+    const mediaContainer =
+        document.getElementById(
+            "media-grid"
+        );
+
+
+    if (mediaContainer) {
+
+
+        for (
+            let i = 1;
+            i <= 6;
+            i++
+        ) {
+
+            const thumb =
+                `assets/media/media${i}.jpg`;
+
+            const video =
+                `assets/media/media${i}.mp4`;
+
+
+            const image =
+                new Image();
+
+
+            image.src =
+                thumb;
+
+
+            image.alt =
+                `Contenido multimedia ${i}`;
+
+
+            image.loading =
+                "lazy";
+
+
+            image.onload = () => {
+
+
+                const mediaItem =
+                    document.createElement("div");
+
+
+                mediaItem.className =
+                    "media-item";
+
+
+                mediaItem.dataset.type =
+                    "video";
+
+
+                mediaItem.dataset.src =
+                    video;
+
+
+                mediaItem.appendChild(
+                    image
+                );
+
+
+                const play =
+                    document.createElement("span");
+
+
+                play.className =
+                    "play";
+
+
+                play.textContent =
+                    "▶";
+
+
+                play.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+
+                mediaItem.appendChild(
+                    play
+                );
+
+
+                mediaItem.addEventListener(
+                    "click",
+                    async () => {
+
+                        try {
+
+                            const response =
+                                await fetch(
+                                    video,
+                                    {
+                                        method: "HEAD"
+                                    }
+                                );
+
+
+                            if (response.ok) {
+
+                                openModal(`
+
+                                    <div class="video-modal">
+
+                                        <video
+                                            controls
+                                            autoplay
+                                            playsinline
+                                            preload="metadata"
+                                        >
+
+                                            <source
+                                                src="${video}"
+                                                type="video/mp4"
+                                            >
+
+                                            Tu navegador no puede reproducir este video.
+
+                                        </video>
+
+                                    </div>
+
+                                `);
+
+                            } else {
+
+                                openModal(`
+
+                                    <img
+                                        src="${thumb}"
+                                        alt="Contenido multimedia ${i}"
+                                    >
+
+                                `);
+
+                            }
+
+                        } catch (error) {
+
+                            console.warn(
+                                `No se pudo comprobar ${video}`,
+                                error
+                            );
+
+
+                            openModal(`
+
+                                <img
+                                    src="${thumb}"
+                                    alt="Contenido multimedia ${i}"
+                                >
+
+                            `);
+
+                        }
+
+                    }
+                );
+
+
+                mediaContainer.appendChild(
+                    mediaItem
+                );
+
+            };
+
+
+            image.onerror = () => {
+
+                console.warn(
+                    `No se encontró: ${thumb}`
+                );
+
+            };
+
+        }
+
+    }
+
+
+    // ========================================================
+    // REDES SOCIALES
+    // ========================================================
+
+    const facebookUrl =
+        "https://www.facebook.com/share/167cMEvde2r/?mibextid=wwXIfr";
+
+
+    const instagramUrl =
+        "https://www.instagram.com/lthormigones?igsi=MXc1dDQ0OW1tM2RuYg==";
+
+
+    const facebookLink =
+        document.getElementById(
+            "facebook-link"
+        );
+
+
+    const instagramLink =
+        document.getElementById(
+            "instagram-link"
+        );
+
+
+    if (facebookLink) {
+
+        facebookLink.href =
+            facebookUrl;
+
+        facebookLink.target =
+            "_blank";
+
+        facebookLink.rel =
+            "noopener noreferrer";
+
+    }
+
+
+    if (instagramLink) {
+
+        instagramLink.href =
+            instagramUrl;
+
+        instagramLink.target =
+            "_blank";
+
+        instagramLink.rel =
+            "noopener noreferrer";
+
+    }
+
+
+    // ========================================================
+    // FORMULARIO
+    // ========================================================
+
+    const form =
+        document.getElementById(
+            "contact-form"
+        );
+
+
+    if (form) {
+
+        form.addEventListener(
+            "submit",
+            () => {
+
+                const submitButton =
+                    form.querySelector(
+                        'button[type="submit"]'
+                    );
+
+
+                if (submitButton) {
+
+                    submitButton.disabled =
+                        true;
+
+                    submitButton.textContent =
+                        "Enviando...";
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // ========================================================
+    // ANCHOR / SCROLL SUAVE
+    // ========================================================
+
+    const anchorLinks =
+        document.querySelectorAll(
+            'a[href^="#"]'
+        );
+
+
+    anchorLinks.forEach((link) => {
+
+        link.addEventListener(
+            "click",
+            (event) => {
+
+                const targetId =
+                    link.getAttribute("href");
+
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
+
+
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
+
+
+                if (!target) {
+                    return;
+                }
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+        );
+
     });
-  }
 
-  // Mejora de accesibilidad: focus visible para salto por anchors
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(l=> l.addEventListener('click', function(){
-    const id = this.getAttribute('href').substring(1);
-    const el = document.getElementById(id);
-    if(el) el.setAttribute('tabindex','-1');
-  }));
 
-  // Small enhancement: if hero video absent, show poster (browser handles it) and ensure contrast
-});
-const header = document.querySelector(".site-header");
+    // ========================================================
+    // HEADER AL HACER SCROLL
+    // ========================================================
 
-window.addEventListener("scroll", () => {
+    const header =
+        document.querySelector(
+            ".site-header"
+        );
 
-    if(window.scrollY > 100){
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
+
+    if (header) {
+
+
+        const updateHeader =
+            () => {
+
+                if (
+                    window.scrollY > 100
+                ) {
+
+                    header.classList.add(
+                        "scrolled"
+                    );
+
+                } else {
+
+                    header.classList.remove(
+                        "scrolled"
+                    );
+
+                }
+
+            };
+
+
+        window.addEventListener(
+            "scroll",
+            updateHeader,
+            {
+                passive: true
+            }
+        );
+
+
+        updateHeader();
+
     }
 
 });
