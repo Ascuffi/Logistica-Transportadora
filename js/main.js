@@ -121,7 +121,7 @@ if (worksGallery) {
         item.className = "gallery-item";
     item.innerHTML = `
     <div class="video-thumb">
-        <img src="assets/obra17.jpg" alt="Obra"play-icon">▶</span>
+        <img src="assets/social/fotobomba10.png" alt="Obra"play-icon">▶</span>
     </div>
 `;
 
