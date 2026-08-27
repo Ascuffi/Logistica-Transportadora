@@ -106,45 +106,64 @@ document.querySelectorAll(".machine").forEach(card => {
 /* ============================
    VIDEOS OBRAS
 ============================ */
+
 const obrasVideos = [
-    /*"assets/videos/motobomba1.mov",*/
-    /*"assets/videos/obra2.mov",*/
-    "assets/videos/obra17.mp4",
-    "assets/videos/obra21.mp4",
-    /*"assets/videos/obra3.mov",*/
-    /*"assets/videos/topadora2.mov"*/
+{
+    thumb: "assets/social/recuadro1.png",
+    video: "assets/videos/laboratorio.mp4"
+},
+{
+    thumb: "assets/social/recuadro2.png",
+    video: "assets/videos/motobomba1.mp4"
+},
+{
+    thumb: "assets/social/recuadro3.png",
+    video: "assets/videos/obra17.mp4"
+},
+{
+    thumb: "assets/social/recuadro4.png",
+    video: "assets/videos/obra2.mp4"
+},
+{
+    thumb: "assets/social/recuadro5.png",
+    video: "assets/videos/obra21.mp4"
+},
+{
+    thumb: "assets/social/recuadro6.png",
+    video: "assets/videos/topadora2.mp4"
+}
 ];
+
 const worksGallery = document.getElementById("works-gallery");
+
 if (worksGallery) {
-    obrasVideos.forEach(video => {
-        const item = document.createElement("div");
-        item.className = "gallery-item";
-   item.innerHTML = `
-    <div class="video-thumb">
-        <video
-            muted
-            preload="metadata"
-            playsinline
-        >
-            ${video}
-        </video>
-        <span class="play-icon">▶</span>
-    </div>
-`;
 
+    obrasVideos.forEach(item => {
 
-        item.addEventListener("click", () => {
-    openModal(`
-        <video
-            src="${video}"
-            controls
-            autoplay
-            style="width:100%;height:100%;object-fit:contain;"
-                </video>
-            `);
-        });
-        worksGallery.appendChild(item);
+        const card = document.createElement("div");
+
+        card.className = "gallery-item";
+
+        card.innerHTML = `
+            <div class="video-thumb">
+
+                <img src="${item.thumb}" alt=" <div class="play-icon">
+                    ▶
+                </div>
+
+            </div>
+        `;
+
+        card.addEventListener("click", () => {
+
+            openModal(`
+                <video
+                    src="${item.video}"
+                    controls
+              ;
+
     });
+
 }
   // Carga dinámica de galería de obras (assets/works/work1.jpg ... work8.jpg)
   /*const worksContainer = document.getElementById('works-gallery');
