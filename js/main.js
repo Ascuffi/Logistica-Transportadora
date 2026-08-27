@@ -119,11 +119,19 @@ if (worksGallery) {
     obrasVideos.forEach(video => {
         const item = document.createElement("div");
         item.className = "gallery-item";
-    item.innerHTML = `
+   item.innerHTML = `
     <div class="video-thumb">
-        <img src="assets/social/fotobomba10.png" alt="Obra"play-icon">▶</span>
+        <video
+            muted
+            preload="metadata"
+            playsinline
+        >
+            ${video}
+        </video>
+        <span class="play-icon">▶</span>
     </div>
 `;
+
 
         item.addEventListener("click", () => {
     openModal(`
