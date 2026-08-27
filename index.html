@@ -1,262 +1,836 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LT Hormigones — Logística Transportadora S.A.</title>
-  <meta name="description" content="LT Hormigones — Soluciones en logística y transporte de hormigón y materiales. Tecnología, flota y experiencia al servicio de tu obra.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LT Hormigones — Logística Transportadora S.A.</title>
+
+    <meta
+        name="description"
+        content="LT Hormigones — Soluciones en logística y transporte de hormigón y materiales. Tecnología, flota y experiencia al servicio de tu obra."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#home" class="brand">
-        <img src="assets/logo.PNG" alt="LT Hormigones" class="logo">
-      </a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
-        ☰
-</button>
-      <nav class="main-nav" id="main-nav">
-        <a class="nav-link" href="#nosotros">Nosotros</a>
-        <a class="nav-link" href="#productos">Productos & Servicios</a>
-        <a class="nav-link" href="#tecnologia">Tecnología</a>
-        <a class="nav-link" href="#maquinaria">Maquinaria</a>
-        <a class="nav-link" href="#obras">Obras</a>
-        <a class="nav-link" href="#redes">Redes</a>
-        <a class="nav-link" href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- HERO con video de fondo -->
-    <section class="hero" id="home">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="assets/social/video.mp4.mp4" type="video/mp4">
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Logística Transportadora</h1>
-        <p>Soluciones integrales en logística, transporte y suministro de hormigón elaborado.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
-          <a class="btn btn-outline" href="#tecnologia">Nuestra Flota</a>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header" id="top">
+
+        <div class="container header-inner">
+
+            <a href="#home" class="brand" aria-label="LT Hormigones - Inicio">
+                <img
+                    src="assets/logo.PNG"
+                    alt="LT Hormigones"
+                    class="logo"
+                >
+            </a>
+
+            <button
+                class="nav-toggle"
+                id="nav-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="main-nav"
+            >
+                ☰
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+
+                <a class="nav-link" href="#nosotros">Nosotros</a>
+
+                <a class="nav-link" href="#productos">
+                    Productos &amp; Servicios
+                </a>
+
+                <a class="nav-link" href="#tecnologia">
+                    Tecnología
+                </a>
+
+                <a class="nav-link" href="#maquinaria">
+                    Maquinaria
+                </a>
+
+                <a class="nav-link" href="#obras">
+                    Obras
+                </a>
+
+                <a class="nav-link" href="#redes">
+                    Redes
+                </a>
+
+                <a class="nav-link" href="#contacto">
+                    Contacto
+                </a>
+
+            </nav>
+
         </div>
-      </div>
-    </section>
 
-    <!-- WhatsApp flotante (logo oficial) -->
-    <a id="whatsapp-fab" href="https://wa.me/5492262500004?text=Hola%20LT%20Hormigones,%20quiero%20informaci%C3%B3n" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <img src="assets/whatsapp.webp.webp" alt="WhatsApp" class="whatsapp-icon">
-    </a>
+    </header>
 
-    <!-- Nosotros -->
-    <section class="section lt-bg" id="nosotros">
-      <div class="container">
-        <h2>Nosotros</h2>
-        <p class="lead">Con más de 20 años de trayectoria, LT Hormigones combina experiencia, flota moderna y tecnología para entregar materiales con trazabilidad y seguridad.</p>
-        <div class="cards">
-          <article class="card mision">
-            <h3>Misión</h3>
-            <p>Optimizar la logística de materiales para que tus obras cumplan tiempos y presupuestos.</p>
-          </article>
-          <article class="card vision">
-            <h3>Visión</h3>
-            <p>Ser líderes regionales en soluciones de hormigón con excelencia operacional y tecnológica.</p>
-          </article>
-          <article class="card valores">
-            <h3>Valores</h3>
-            <p>Seguridad, puntualidad, transparencia e innovación.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- Productos y Servicios -->
-    <section class="section lt-bg" id="productos">
-      <div class="container">
-        <h2>Productos & Servicios</h2>
-        <div class="services-grid">
-<div class="service hormigon">
-    <video class="service-video" autoplay muted loop playsinline>
-       <source src="assets/Laboratorio1.mp4" type="video/mp4">
-    </video>
-    <h4>Hormigón Elaborado</h4>
-    <p>
-        Formulaciones según proyecto y control de calidad certificado.
-    </p>
-</div>
-  <div class="service transporte">
-    <h4>Transporte Especializado</h4>
-    <p>Flota propia para traslados seguros y a tiempo.</p>
-  </div>
-  <div class="service bombas">
-    <h4>Bombas & Equipos</h4>
-    <p>Soluciones de bombeo para acceso vertical y zonas complejas.</p>
-  </div>
-  <div class="service logistica">
-    <h4>Logística Integral</h4>
-    <p>Planificación, coordinación y entregas sincronizadas con la obra.</p>
-  </div>
-</div>
-      </div>
-    </section>
-    <!-- Tecnología y Equipamiento -->
-    <div class="tecnologia-wrapper lt-bg">
-    <section class="section section-dark" id="tecnologia">
-      <div class="container">
-        <h2>Tecnología y Equipamiento</h2>
-        <p class="lead">Digitalización, telemetría y mantenimientos preventivos para garantizar disponibilidad de flota y calidad del producto.</p>
-        <div class="equip-grid" id="equip-grid">
-         <div class="equip mixer">
-    <h5>Camiones Hormigonera</h5>
-    <p>Flota moderna y mantenida.</p>
-</div>
-<div class="equip bomba">
-    <h5>Bombas</h5>
-    <p>Equipos específicos para cada necesidad.</p>
-</div>
-<div class="equip laboratorio">
-    <h5>Control de Calidad</h5>
-    <p>Laboratorio móvil y procedimientos trazables.</p>
-</div>
-        </div>
-      </div>
-    </section>
-    <!-- Maquinarias -->
-    <div class="tecnologia-wrapper lt-bg">
-      <div class="container">
-        <h2>Maquinarias</h2>
-        <p class="lead">Catálogo básico de maquinaria y equipos operativos.</p>
-        <div class="machine-grid" id="machine-grid">
-  <div class="machine mezcladora" data-gallery="mezcladora">
-    <h5>Mezcladora</h5>
-    <span class="gallery-link">📷 Ver galería</span>
-</div>
 
-<div class="machine machine planta" data-gallery="planta">
-    <h5>Movimiento de Suelos</h5>
-    <span class="gallery-link">📷 Ver galería</span>
-</div>
+    <main>
 
-<div class="machine camionbomba" data-gallery="camionbomba">
-    <h5>Camión Bomba</h5>
-    <span class="gallery-link">📷 Ver galería</span>
-</div>
-        </div>
-      </div>
-    </section>
-      </div>
-    <!-- Galería de Obras -->
-    <section class="section lt-bg" id="obras">
-      <div class="container">
-        <h2>Obras Realizadas</h2>
-        <p class="lead">Fotografías y registros audiovisuales de obras, equipos y proyectos realizados por LT Hormigones.</p>
-        <div class="gallery" id="works-gallery"></div>
-      </div>
-    </section>
-    <!-- Redes Sociales -->
-   <section class="section lt-bg" id="redes">
-      <div class="container">
-        <h2>Redes Sociales</h2>
-        <p class="lead">Seguinos para ver novedades, obras y casos reales.</p>
-        <div class="social-row">
-          <a id="facebook-link" class="social-card facebook-card" href="https://www.facebook.com/share/167cMEvde2r/?mibextid=wwXIfr" target="_blank" rel="noopener">
-            <img src="assets/social/Facebook.webp" alt="Facebook">
-            <div>
-              <h4>Facebook</h4>
-              <p>Visita nuestro perfil para ver publicaciones y noticias.</p>
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero" id="home">
+
+            <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+            >
+                <source
+                    src="assets/social/video.mp4.mp4"
+                    type="video/mp4"
+                >
+
+                Tu navegador no soporta video HTML5.
+            </video>
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <h1>Logística Transportadora</h1>
+
+                <p>
+                    Soluciones integrales en logística, transporte y
+                    suministro de hormigón elaborado.
+                </p>
+
+                <div class="hero-cta">
+
+                    <a
+                        class="btn btn-primary"
+                        href="#contacto"
+                    >
+                        Solicitar presupuesto
+                    </a>
+
+                    <a
+                        class="btn btn-outline"
+                        href="#tecnologia"
+                    >
+                        Nuestra Flota
+                    </a>
+
+                </div>
+
             </div>
-          </a>
-          <a id="instagram-link" class="social-card instagram-card" href="https://www.instagram.com/lthormigones?igsi=MXc1dDQ0OW1tM2RuYg==" target="_blank" rel="noopener">
-            <img src="assets/social/Instagram.webp" alt="Instagram">
-            <div>
-              <h4>Instagram</h4>
-              <p>Galería visual y videos cortos de obras y equipo.</p>
+
+        </section>
+
+
+        <!-- =================================================
+             WHATSAPP
+        ================================================== -->
+
+        <a
+            id="whatsapp-fab"
+            href="https://wa.me/5492262500004?text=Hola%20LT%20Hormigones,%20quiero%20informaci%C3%B3n"
+            class="whatsapp-fab"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp"
+        >
+
+            <img
+                src="assets/whatsapp.webp.webp"
+                alt="WhatsApp"
+                class="whatsapp-icon"
+            >
+
+        </a>
+
+
+        <!-- =================================================
+             NOSOTROS
+        ================================================== -->
+
+        <section
+            class="section lt-bg"
+            id="nosotros"
+        >
+
+            <div class="container">
+
+                <h2>Nosotros</h2>
+
+                <p class="lead">
+                    Con más de 20 años de trayectoria, LT Hormigones
+                    combina experiencia, flota moderna y tecnología
+                    para entregar materiales con trazabilidad y seguridad.
+                </p>
+
+                <div class="cards">
+
+                    <article class="card mision">
+
+                        <h3>Misión</h3>
+
+                        <p>
+                            Optimizar la logística de materiales para que
+                            tus obras cumplan tiempos y presupuestos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card vision">
+
+                        <h3>Visión</h3>
+
+                        <p>
+                            Ser líderes regionales en soluciones de
+                            hormigón con excelencia operacional y tecnológica.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card valores">
+
+                        <h3>Valores</h3>
+
+                        <p>
+                            Seguridad, puntualidad, transparencia e innovación.
+                        </p>
+
+                    </article>
+
+                </div>
+
             </div>
-          </a>
+
+        </section>
+
+
+        <!-- =================================================
+             PRODUCTOS Y SERVICIOS
+        ================================================== -->
+
+        <section
+            class="section lt-bg"
+            id="productos"
+        >
+
+            <div class="container">
+
+                <h2>Productos &amp; Servicios</h2>
+
+                <div class="services-grid">
+
+
+                    <article class="service hormigon">
+
+                        <video
+                            class="service-video"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata"
+                        >
+
+                            <source
+                                src="assets/Laboratorio1.mp4"
+                                type="video/mp4"
+                            >
+
+                        </video>
+
+                        <h4>Hormigón Elaborado</h4>
+
+                        <p>
+                            Formulaciones según proyecto y control de calidad certificado.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service transporte">
+
+                        <h4>Transporte Especializado</h4>
+
+                        <p>
+                            Flota propia para traslados seguros y a tiempo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service bombas">
+
+                        <h4>Bombas &amp; Equipos</h4>
+
+                        <p>
+                            Soluciones de bombeo para acceso vertical
+                            y zonas complejas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service logistica">
+
+                        <h4>Logística Integral</h4>
+
+                        <p>
+                            Planificación, coordinación y entregas
+                            sincronizadas con la obra.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TECNOLOGÍA
+        ================================================== -->
+
+        <section
+            class="section section-dark lt-bg"
+            id="tecnologia"
+        >
+
+            <div class="container">
+
+                <h2>Tecnología y Equipamiento</h2>
+
+                <p class="lead">
+                    Digitalización, telemetría y mantenimientos preventivos
+                    para garantizar disponibilidad de flota y calidad del producto.
+                </p>
+
+                <div
+                    class="equip-grid"
+                    id="equip-grid"
+                >
+
+                    <article class="equip mixer">
+
+                        <h5>Camiones Hormigonera</h5>
+
+                        <p>
+                            Flota moderna y mantenida.
+                        </p>
+
+                    </article>
+
+
+                    <article class="equip bomba">
+
+                        <h5>Bombas</h5>
+
+                        <p>
+                            Equipos específicos para cada necesidad.
+                        </p>
+
+                    </article>
+
+
+                    <article class="equip laboratorio">
+
+                        <h5>Control de Calidad</h5>
+
+                        <p>
+                            Laboratorio móvil y procedimientos trazables.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MAQUINARIAS
+        ================================================== -->
+
+        <section
+            class="section section-dark lt-bg"
+            id="maquinaria"
+        >
+
+            <div class="container">
+
+                <h2>Maquinarias</h2>
+
+                <p class="lead">
+                    Catálogo básico de maquinaria y equipos operativos.
+                </p>
+
+                <div
+                    class="machine-grid"
+                    id="machine-grid"
+                >
+
+                    <article
+                        class="machine mezcladora"
+                        data-gallery="mezcladora"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Ver galería de mezcladora"
+                    >
+
+                        <h5>Mezcladora</h5>
+
+                        <span class="gallery-link">
+                            📷 Ver galería
+                        </span>
+
+                    </article>
+
+
+                    <article
+                        class="machine planta"
+                        data-gallery="planta"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Ver galería de movimiento de suelos"
+                    >
+
+                        <h5>Movimiento de Suelos</h5>
+
+                        <span class="gallery-link">
+                            📷 Ver galería
+                        </span>
+
+                    </article>
+
+
+                    <article
+                        class="machine camionbomba"
+                        data-gallery="camionbomba"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Ver galería de camión bomba"
+                    >
+
+                        <h5>Camión Bomba</h5>
+
+                        <span class="gallery-link">
+                            📷 Ver galería
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             OBRAS
+        ================================================== -->
+
+        <section
+            class="section lt-bg"
+            id="obras"
+        >
+
+            <div class="container">
+
+                <h2>Obras Realizadas</h2>
+
+                <p class="lead">
+                    Fotografías y registros audiovisuales de obras,
+                    equipos y proyectos realizados por LT Hormigones.
+                </p>
+
+                <div
+                    class="gallery"
+                    id="works-gallery"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REDES SOCIALES
+        ================================================== -->
+
+        <section
+            class="section lt-bg"
+            id="redes"
+        >
+
+            <div class="container">
+
+                <h2>Redes Sociales</h2>
+
+                <p class="lead">
+                    Seguinos para ver novedades, obras y casos reales.
+                </p>
+
+                <div class="social-row">
+
+
+                    <a
+                        id="facebook-link"
+                        class="social-card facebook-card"
+                        href="https://www.facebook.com/share/167cMEvde2r/?mibextid=wwXIfr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <img
+                            src="assets/social/Facebook.webp"
+                            alt="Facebook"
+                        >
+
+                        <div>
+
+                            <h4>Facebook</h4>
+
+                            <p>
+                                Visita nuestro perfil para ver publicaciones
+                                y noticias.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        id="instagram-link"
+                        class="social-card instagram-card"
+                        href="https://www.instagram.com/lthormigones?igsi=MXc1dDQ0OW1tM2RuYg=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <img
+                            src="assets/social/Instagram.webp"
+                            alt="Instagram"
+                        >
+
+                        <div>
+
+                            <h4>Instagram</h4>
+
+                            <p>
+                                Galería visual y videos cortos de obras y equipo.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACTO
+        ================================================== -->
+
+        <section
+            class="section lt-bg"
+            id="contacto"
+        >
+
+            <div class="container contact-grid">
+
+
+                <div class="contact-card">
+
+                    <div class="brand-contact">
+
+                        <img
+                            src="assets/logo.PNG"
+                            alt="LT Hormigones"
+                            class="logo-contacto"
+                        >
+
+                        <div class="contact-title">
+
+                            <h2>Contacto</h2>
+
+                            <small class="muted">
+                                Completá el formulario y hacé clic en Enviar.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Consultas comerciales, presupuestos y coordinación de obras.
+                    </p>
+
+
+                    <ul class="contact-info">
+
+                        <li>
+                            <strong>Tel:</strong>
+                            <a href="tel:+5492262500004">
+                                +54 9 2262500004
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Email:</strong>
+                            <a href="mailto:itnecochea@gmail.com">
+                                itnecochea@gmail.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Horario:</strong>
+                            Lun - Vie 8:00 - 18:00
+                        </li>
+
+                        <li>
+                            <strong>Dirección:</strong>
+                            Calle 94 N°1702 y Ruta 86
+                        </li>
+
+                    </ul>
+
+
+                    <form
+                        id="contact-form"
+                        action="https://formspree.io/f/{tu_form_id}"
+                        method="POST"
+                    >
+
+                        <label for="name">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Tu nombre completo"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <small class="input-hint">
+                            Escribí tu nombre.
+                        </small>
+
+
+                        <label for="phone">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Ej: +54 9 351 1234567"
+                            autocomplete="tel"
+                        >
+
+                        <small class="input-hint">
+                            Incluí el prefijo internacional si corresponde.
+                        </small>
+
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="tucorreo@ejemplo.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small class="input-hint">
+                            Escribí una dirección válida para que podamos responder.
+                        </small>
+
+
+                        <label for="message">
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Contanos sobre tu proyecto"
+                            required
+                        ></textarea>
+
+                        <small class="input-hint">
+                            Describí brevemente tu consulta.
+                        </small>
+
+
+                        <button
+                            class="btn btn-primary"
+                            type="submit"
+                        >
+                            Enviar
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- MAPA -->
+
+                <div class="map-card">
+
+                    <h3>Ubicación</h3>
+
+                    <div class="map-wrap">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61621.70153304571!2d-58.703872000000004!3d-38.554828799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x958fbd8e471b9003%3A0x9357ff6ec22b4313!2sLog%C3%ADstica%20Transportadora!5e1!3m2!1ses!2sar!4v1787404295228!5m2!1ses!2sar"
+                            title="Ubicación de Logística Transportadora"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div class="footer-brand">
+
+                <img
+                    src="assets/logo.PNG"
+                    alt="LT Hormigones"
+                    class="logo-footer-small"
+                >
+
+                <div></div>
+
+            </div>
+
+
+            <nav class="footer-nav">
+
+                <a href="#nosotros">
+                    Nosotros
+                </a>
+
+                <a href="#productos">
+                    Servicios
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <div class="legal">
+
+                © <span id="year"></span>
+                Logística Transportadora —
+                Todos los derechos reservados.
+
+            </div>
+
         </div>
-      </div>
-    </section>
-    <!-- Contacto + Mapa -->
-    <section class="section lt-bg" id="contacto">
-      <div class="container contact-grid">
-        <div class="contact-card">
-     <div class="brand-contact">
-    <img src="assets/logo.PNG" alt="LT Hormigones"  class="logo-contacto">
-  <div class="contact-title">
-        <h2>Contacto</h2>
-        <small class="muted">
-            Completa el formulario y haz clic en Enviar
-        </small>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
+
+    <div
+        id="modal"
+        class="modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Galería multimedia"
+    >
+
+        <button
+            class="modal-close"
+            id="modal-close"
+            type="button"
+            aria-label="Cerrar"
+        >
+            ✕
+        </button>
+
+        <div
+            class="modal-content"
+            id="modal-content"
+        ></div>
+
     </div>
-    </div>
-          <p>Consultas comerciales, presupuestos y coordinación de obras.</p>
-          <ul class="contact-info">
-            <li><strong>Tel:</strong> <a href="tel:+5492262500004">+54 9 2262500004</a></li>
-            <li><strong>Email:</strong> <a href="mailto:itnecochea@gmail.com">itnecochea@gmail.com</a></li>
-            <li><strong>Horario:</strong> Lun - Vie 8:00 - 18:00</li>
-            <li><strong>Dirección:</strong> Calle 94 N°1702 y Ruta 86</li>
-          </ul>
 
-          <form id="contact-form" action="https://formspree.io/f/{tu_form_id}" method="POST">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
-            <small class="input-hint">Haz clic aquí y escribe tu nombre</small>
 
-            <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ej: +54 9 351 1234567">
-            <small class="input-hint">Incluye el prefijo internacional si corresponde</small>
+    <script
+        src="js/main.js"
+        defer
+    ></script>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-            <small class="input-hint">Escribe una dirección válida para que podamos responder</small>
-
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
-            <small class="input-hint">Describe brevemente tu consulta</small>
-
-            <button class="btn btn-primary" type="submit">Enviar</button>
-          </form>
-        </div>
-
-        <div class="map-card">
-          <h3>Ubicación</h3>
-          <div class="map-wrap map-small">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61621.70153304571!2d-58.703872000000004!3d-38.554828799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x958fbd8e471b9003%3A0x9357ff6ec22b4313!2sLog%C3%ADstica%20Transportadora!5e1!3m2!1ses!2sar!4v1787404295228!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-</div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo.PNG" alt="LT Hormigones" class="logo-footer-small">
-        <div>
-          <strong></strong>
-          <p></p>
-        </div>
-      </div>
-      <nav class="footer-nav">
-        <a href="#nosotros">Nosotros</a>
-        <a href="#productos">Servicios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-      <div class="legal">© <span id="year"></span> Logistica Transportadora — Todos los derechos reservados.</div>
-    </div>
-  </footer>
-
-  <!-- Modal para galería -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
-    <div class="modal-content" id="modal-content"></div>
-  </div>
-
-  <script src="js/main.js" defer></script>
 </body>
+
 </html>
