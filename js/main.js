@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/social/recuadro3.png",
 
             video:
-                "assets/videos/obra17.mp4",
+                "assets/videos/topadora2.mp4",
 
             title:
                 "Obra"
