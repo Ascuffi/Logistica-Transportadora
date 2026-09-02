@@ -658,11 +658,7 @@
 </div>
 
 
-                    <form
-                        id="contact-form"
-                        action="https://formspree.io/f/{tu_form_id}"
-                        method="POST"
-                    >
+                    <form id="contact-form">
 
                         <label for="name">
                             Nombre
@@ -863,8 +859,17 @@
 
 
     <script
-        src="js/main.js"
-        defer
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@js</script>
+
+<script>
+emailjs.init({
+    publicKey: "IUZqDwbFziwhjX4sY"
+});
+</script>
+
+<script
+    src="js/main.js"
+    defer
     ></script>
 
 </body>
