@@ -784,42 +784,85 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // ========================================================
-    // FORMULARIO
-    // ========================================================
+   // ========================================================
+// FORMULARIO EMAILJS
+// ========================================================
 
-    const form =
-        document.getElementById(
-            "contact-form"
-        );
+const form =
+    document.getElementById(
+        "contact-form"
+    );
 
+if (form) {
 
-    if (form) {
+    form.addEventListener(
+        "submit",
+        async (event) => {
 
-        form.addEventListener(
-            "submit",
-            () => {
+            event.preventDefault();
 
-                const submitButton =
-                    form.querySelector(
-                        'button[type="submit"]'
-                    );
+            const submitButton =
+                form.querySelector(
+                    'button[type="submit"]'
+                );
 
+            submitButton.disabled = true;
 
-                if (submitButton) {
+            submitButton.textContent =
+                "Enviando...";
 
-                    submitButton.disabled =
-                        true;
+            try {
 
-                    submitButton.textContent =
-                        "Enviando...";
+                await emailjs.send(
 
-                }
+                    "service_1",
+
+                    "template_gogx17t",
+
+                    {
+
+                        name:
+                            document.getElementById("name").value,
+
+                        phone:
+                            document.getElementById("phone").value,
+
+                        email:
+                            document.getElementById("email").value,
+
+                        message:
+                            document.getElementById("message").value
+
+                    }
+
+                );
+
+                alert(
+                    "✅ Consulta enviada correctamente.\n\nGracias por contactar a LT Hormigones."
+                );
+
+                form.reset();
+
+            } catch (error) {
+
+                console.error(error);
+
+                alert(
+                    "❌ Error al enviar la consulta."
+                );
 
             }
-        );
 
-    }
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "Enviar";
+
+        }
+
+    );
+
+}
 
 
     // ========================================================
