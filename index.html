@@ -870,7 +870,99 @@ emailjs.init({
     src="js/main.js"
     defer
     ></script>
+<!-- =====================================================
+     ASISTENTE VIRTUAL LT
+====================================================== -->
 
+<div class="lt-assistant">
+
+    <!-- Botón flotante -->
+    <button
+        id="lt-chat-toggle"
+        class="lt-chat-toggle"
+        type="button"
+        aria-label="Abrir Asistente Virtual LT"
+        aria-expanded="false"
+    >
+        <span class="lt-chat-toggle-icon">💬</span>
+
+        <span class="lt-chat-toggle-text">
+            <strong>Asistente LT</strong>
+            <small>¿Necesitás hormigón?</small>
+        </span>
+    </button>
+
+
+    <!-- Ventana -->
+    <section
+        id="lt-chat-window"
+        class="lt-chat-window"
+        aria-hidden="true"
+        aria-label="Asistente Virtual LT Hormigones"
+    >
+
+        <!-- Header -->
+        <header class="lt-chat-header">
+
+            <div class="lt-chat-brand">
+
+                assets/logo.PNG
+
+                <div>
+                    <strong>Asistente LT</strong>
+
+                    <span class="lt-chat-status">
+                        <i></i>
+                        Asistente virtual
+                    </span>
+                </div>
+
+            </div>
+
+            <button
+                id="lt-chat-close"
+                class="lt-chat-close"
+                type="button"
+                aria-label="Cerrar asistente"
+            >
+                ✕
+            </button>
+
+        </header>
+
+
+        <!-- Conversación -->
+        <div
+            id="lt-chat-body"
+            class="lt-chat-body"
+            aria-live="polite"
+        ></div>
+
+
+        <!-- Pie -->
+        <footer class="lt-chat-footer">
+
+            <button
+                id="lt-chat-home"
+                class="lt-chat-footer-btn"
+                type="button"
+            >
+                🏠 Inicio
+            </button>
+
+            <button
+                id="lt-chat-back"
+                class="lt-chat-footer-btn"
+                type="button"
+            >
+                ← Volver
+            </button>
+
+        </footer>
+
+    </section>
+
+</div>
 </body>
 
 </html>
