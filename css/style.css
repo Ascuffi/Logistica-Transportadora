@@ -2372,49 +2372,50 @@ body.modal-open {
 .lt-chat-toggle {
     position: fixed;
 
-    left: 20px;
-   right: auto;
-   bottom: 20px;
+    left: 18px;
+    right: auto;
+    bottom: 18px;
+
+    width: 64px;
+    height: 64px;
 
     z-index: 1800;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    gap: 12px;
-
-    padding: 12px 18px;
-
-    color: var(--black);
+    padding: 0;
+    margin: 0;
 
     background:
         linear-gradient(
-            135deg,
+            180deg,
             var(--yellow),
             var(--yellow-dark)
         );
 
-    border: 0;
-
-    border-radius: 50px;
+    border: none;
+    border-radius: 50%;
 
     cursor: pointer;
 
     box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.50),
-        0 0 25px rgba(245, 196, 0, 0.18);
+        0 12px 30px rgba(0, 0, 0, 0.45);
+
+    animation: ltAssistantPulse 2.5s infinite;
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 
-    animation:
-        ltAssistantPulse 3s infinite;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 
 .lt-chat-toggle:hover {
-    transform: translateY(-4px);
+    transform: translateY(1px);
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.60),
@@ -2423,7 +2424,22 @@ body.modal-open {
 
 
 .lt-chat-toggle-icon {
-    font-size: 1.7rem;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 34px;
+    line-height: 1;
+
+    text-align: center;
+
+    pointer-events: none;
 }
 
 
