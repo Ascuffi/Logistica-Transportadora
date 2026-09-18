@@ -815,9 +815,9 @@ if (form) {
 
                 await emailjs.send(
 
-                    "service_1",
+                    "service_h4stih7",
 
-                    "template_gogx17t",
+                    "template_k2q4vhs",
 
                     {
 
